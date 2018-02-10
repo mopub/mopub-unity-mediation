@@ -23,7 +23,6 @@ public class MoPubDemoGUI : MonoBehaviour
 	private Queue<string> _requestedBannerAdUnits = new Queue<string> ();
 
 	private string[] _networkList = new string[] {
-		"MoPub",
 		"Millennial",
 		"AdMob",
 		"Chartboost",
@@ -36,8 +35,7 @@ public class MoPubDemoGUI : MonoBehaviour
 	#if UNITY_ANDROID
 	private Dictionary<string, string[]> _bannerDict = new Dictionary<string, string[]> () {
 		{ "Facebook", new string[] { "b40a96dd275e4ce5be2cdf5faa92007d" } },
-		{ "Millennial", new string[] { "1aa442709c9f11e281c11231392559e4" } },
-		{ "MoPub", new string[] { "b195f8dd8ded45fe847ad89ed1d016da" } },
+		{ "Millennial", new string[] { "1aa442709c9f11e281c11231392559e4" } }
 	};
 
 	private Dictionary<string, string[]> _interstitialDict = new Dictionary<string, string[]> () {
@@ -45,7 +43,6 @@ public class MoPubDemoGUI : MonoBehaviour
 		{ "Chartboost", new string[] { "376366b49d324dedae3d5edb360c27b4" } },
 		{ "Facebook", new string[] { "9792d876011f4359887d2d26380e8a84" } },
 		{ "Millennial", new string[] { "7c8428e5acf94811b03d5d788e6b4c45" } },
-		{ "MoPub", new string[] { "24534e1901884e398f1253216226017e" } },
 		{ "Vungle", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } }
 	};
 
@@ -53,20 +50,17 @@ public class MoPubDemoGUI : MonoBehaviour
 		{ "AdColony", new string[] { "e258c916e659447d9d98256a3ab2979e" } },
 		{ "Chartboost", new string[] { "df605ab15b56400285c99e521ecc2cb1" } },
 		{ "Facebook", new string[] { "7220c37b8e93499a8f0aff2eb4f0ad3d" } },
-		{ "MoPub", new string[] { "920b6145fb1546cf8b5cf2ac34638bb7" } },
 		{ "Vungle", new string[] { "6f21f1edd97944a185df00e850d61a98" } }
 	};
 
 	private Dictionary<string, string[]> _rewardedRichMediaDict = new Dictionary<string, string[]> () {
-		{ "MoPub", new string[] { "15173ac6d3e54c9389b9a5ddca69b34b" } }
 	};
 
 	#elif UNITY_IPHONE
 	private Dictionary<string, string[]> _bannerDict = new Dictionary<string, string[]> () {
 		{ "AdMob", new string[] { "c9c2ea9a8e1249b68496978b072d2fd2" } },
 		{ "Facebook", new string[] { "446dfa864dcb4469965267694a940f3d" } },
-		{ "Millennial", new string[] { "b506db1f3e054c78bff513f188727748" } },
-		{ "MoPub", new string[] { "0ac59b0996d947309c33f59d6676399f", "23b49916add211e281c11231392559e4"} },
+		{ "Millennial", new string[] { "b506db1f3e054c78bff513f188727748" } }
 	};
 
 	private Dictionary<string, string[]> _interstitialDict = new Dictionary<string, string[]> () {
@@ -74,7 +68,6 @@ public class MoPubDemoGUI : MonoBehaviour
 		{ "Chartboost", new string[] { "a425ff78959911e295fa123138070049" } },
 		{ "Facebook", new string[] { "cec4c5ea0ff140d3a15264da23449f97" } },
 		{ "Millennial", new string[] { "93c3fc00fbb54825b6a33b20927315f7" } },
-		{ "MoPub", new string[] { "4f117153f5c24fa6a3a92b818a5eb630", "3aba0056add211e281c11231392559e4" } },
 		{ "Vungle", new string[] { "20e01fce81f611e295fa123138070049" } }
 	};
 
@@ -84,7 +77,6 @@ public class MoPubDemoGUI : MonoBehaviour
 		{ "Chartboost", new string[] { "8be0bb08fb4f4e90a86416c29c235d4a" } },
 		{ "Facebook", new string[] { "5a138cf1a03643ca851647d2b2e20d0d" } },
 		{ "Millennial", new string[] { "1908cd1ff0934f69bac04c316accc854" } },
-		{ "MoPub", new string[] { "8f000bd5e00246de9c789eed39ff6096", "98c29e015e7346bd9c380b1467b33850" } },
 		{ "Unity Ads", new string[] { "676a0fa97aca48cbbe489de5b2fa4cd1" } },
 		{ "Vungle", new string[] { "48274e80f11b496bb3532c4f59f28d12" } }
 	};

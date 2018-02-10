@@ -127,7 +127,7 @@ public static class MoPub
 
 	public static string getPluginName ()
 	{
-		return "MoPub Unity Plugin v" + PLUGIN_VERSION;
+		return "MoPub Unity Mediation Plugin v" + PLUGIN_VERSION;
 	}
 
 	public static string getSDKName ()
