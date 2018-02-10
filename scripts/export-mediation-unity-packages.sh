@@ -3,6 +3,7 @@ my_dir="$(dirname "$0")"
 
 # Exports each of the third-party network adapters.
 # NOTE: the mopub-unity-sdk must be cloned as a sibling of this repository.
+# TODO: create unity project and copy files from submodules into correct directories.
 
 OUT_DIR="`pwd`/unity-packages"
 UNITY_BIN=/Applications/Unity/Unity.app/Contents/MacOS/Unity
