@@ -9,10 +9,10 @@ source "$my_dir/validate.sh"
 UNITY_BIN=/Applications/Unity/Unity.app/Contents/MacOS/Unity
 PROJECT_PATH="`pwd`/unity-sample-app"
 OUT_DIR="`pwd`/unity-packages"
-SUPPORT_LIBS=( "AdColony" "GoogleAdMob" "Chartboost" "Facebook" "Unity" "Vungle" )
+SUPPORT_LIBS=( "AdColony" "AOL" "AdMob" "Chartboost" "AudienceNetwork" "UnityAds" "Vungle" )
 
 
-# Generate Unity packages for all networks except Millennial
+# Generate Unity packages for all networks
 for SUPPORT_LIB in "${SUPPORT_LIBS[@]}"
 do
     echo "Processing ${SUPPORT_LIB}..."
@@ -43,12 +43,3 @@ do
     validate
     echo "Exported ${SUPPORT_LIB} (iOS: ${IOS_EXPORT_FOLDER} | Android: ${ANDROID_EXPORT_JAR}) to ${DEST_PACKAGE}"
 done
-
-
-# Generate Unity package for Millennial
-# MM_IOS_EXPORT_FOLDER="Assets/MoPub/Editor/Support/Millennial"
-# MM_ANDROID_EXPORT_FOLDER="Assets/Plugins/Android/mopub-support/libs/Millennial"
-# MM_ANDROID_SDK_FOLDER="Assets/Plugins/Android/mopub-support/libs/Millennial"
-# MM_DEST_PACKAGE="$OUT_DIR/MillennialSupport.unitypackage"
-# $UNITY_BIN -projectPath $PROJECT_PATH -quit -batchmode -logFile $EXPORT_LOG -exportPackage $MM_IOS_EXPORT_FOLDER $MM_ANDROID_EXPORT_FOLDER $MM_ANDROID_SDK_FOLDER $MM_DEST_PACKAGE
-# echo "Exported Millennial (iOS: $MM_IOS_EXPORT_FOLDER | Android: $MM_ANDROID_EXPORT_FOLDER | MM Android SDK: $MM_ANDROID_SDK_FOLDER) to $MM_DEST_PACKAGE"
