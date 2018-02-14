@@ -33,21 +33,21 @@
     }];
 }
 
-- (void)initializeSdkWithParameters:(NSDictionary *)parameters callback:(void(^)(void))completionCallback {
+- (void)initializeSdkWithParameters:(NSDictionary *)parameters callback:(void(^)())completionCallback {
     NSString *appId = [parameters objectForKey:@"appId"];
     if (appId == nil) {
         MPLogError(@"Invalid setup. Use the appId parameter when configuring your network in the MoPub website.");
         return;
     }
-
+    
     NSArray *allZoneIds = [parameters objectForKey:@"allZoneIds"];
     if (allZoneIds.count == 0) {
         MPLogError(@"Invalid setup. Use the allZoneIds parameter when configuring your network in the MoPub website.");
         return;
     }
-
+    
     NSString *userId = [parameters objectForKey:@"userId"];
-
+    
     [AdColonyController initializeAdColonyCustomEventWithAppId:appId allZoneIds:allZoneIds userId:userId callback:completionCallback];
 }
 
@@ -57,37 +57,37 @@
         MPLogError(@"Invalid setup. Use the allZoneIds parameter when configuring your network in the MoPub website.");
         return;
     }
-
+    
     NSString *zoneId = [info objectForKey:@"zoneId"];
     if (zoneId == nil) {
         zoneId = allZoneIds[0];
     }
-
+    
     // Cache the initialization parameters
     [self setCachedInitializationParameters:info];
-
+    
     // Update the user ID
     NSString *customerId = [self.delegate customerIdForRewardedVideoCustomEvent:self];
     NSMutableDictionary *newInfo = [NSMutableDictionary dictionaryWithDictionary:info];
     newInfo[@"userId"] = customerId;
-
+    
     [self initializeSdkWithParameters:newInfo callback:^{
-
+        
         AdColonyInstanceMediationSettings *settings = [self.delegate instanceMediationSettingsForClass:[AdColonyInstanceMediationSettings class]];
         BOOL showPrePopup = (settings) ? settings.showPrePopup : NO;
         BOOL showPostPopup = (settings) ? settings.showPostPopup : NO;
-
+        
         AdColonyAdOptions *options = [AdColonyAdOptions new];
         options.showPrePopup = showPrePopup;
         options.showPostPopup = showPostPopup;
-
+        
         __weak AdColonyRewardedVideoCustomEvent *weakSelf = self;
-
+        
         [AdColony requestInterstitialInZone:zoneId options:options success:^(AdColonyInterstitial * _Nonnull ad) {
             MPLogInfo(@"AdColony ad loaded for zone %@", zoneId);
             weakSelf.zone = [AdColony zoneForID:zoneId];
             weakSelf.ad = ad;
-
+            
             [ad setOpen:^{
                 MPLogInfo(@"AdColony zone %@ started", zoneId);
                 [weakSelf.delegate rewardedVideoWillAppearForCustomEvent:weakSelf];
@@ -110,7 +110,7 @@
                 MPLogInfo(@"AdColony zone %@ ad clicked", zoneId);
                 [weakSelf.delegate rewardedVideoDidReceiveTapEventForCustomEvent:weakSelf];
             }];
-
+            
             [weakSelf.zone setReward:^(BOOL success, NSString * _Nonnull name, int amount) {
                 if (!success) {
                     MPLogInfo(@"AdColony reward failure in zone %@", zoneId);
@@ -118,14 +118,14 @@
                 }
                 [weakSelf.delegate rewardedVideoShouldRewardUserForCustomEvent:weakSelf reward:[[MPRewardedVideoReward alloc] initWithCurrencyType:name amount:@(amount)]];
             }];
-
+            
             [weakSelf.delegate rewardedVideoDidLoadAdForCustomEvent:weakSelf];
         } failure:^(AdColonyAdRequestError * _Nonnull error) {
             MPLogInfo(@"Failed to load AdColony rewarded video in zone %@", error);
             weakSelf.ad = nil;
             [weakSelf.delegate rewardedVideoDidFailToLoadAdForCustomEvent:weakSelf error:error];
         }];
-
+        
     }];
 }
 

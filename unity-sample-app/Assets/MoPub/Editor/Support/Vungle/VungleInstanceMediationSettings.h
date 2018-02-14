@@ -8,9 +8,9 @@
 #import <Foundation/Foundation.h>
 
 #if __has_include(<MoPub/MoPub.h>)
-    #import <MoPub/MoPub.h>
+#import <MoPub/MoPub.h>
 #else
-    #import "MPMediationSettingsProtocol.h"
+#import "MPMediationSettingsProtocol.h"
 #endif
 
 /*
@@ -25,5 +25,9 @@
  * when the rewarded video ad is played.
  */
 @property (nonatomic, copy) NSString *userIdentifier;
+
+@property (nonatomic, assign) NSUInteger ordinal;
+
+@property (nonatomic, assign) NSTimeInterval flexViewAutoDismissSeconds;
 
 @end
