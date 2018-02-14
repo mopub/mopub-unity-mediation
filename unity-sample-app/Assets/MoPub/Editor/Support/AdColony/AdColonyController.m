@@ -29,39 +29,39 @@ typedef enum {
 
 @implementation AdColonyController
 
-+ (void)initializeAdColonyCustomEventWithAppId:(NSString *)appId allZoneIds:(NSArray *)allZoneIds userId:(NSString *)userId callback:(void(^)(void))callback {
++ (void)initializeAdColonyCustomEventWithAppId:(NSString *)appId allZoneIds:(NSArray *)allZoneIds userId:(NSString *)userId callback:(void(^)())callback {
     AdColonyController *instance = [AdColonyController sharedInstance];
-
+    
     @synchronized (instance) {
         NSSet * allZoneIdsSet = [NSSet setWithArray:allZoneIds];
         BOOL zoneIdsSame = [instance.currentAllZoneIds isEqualToSet:allZoneIdsSet];
-
+        
         if (instance.initState == INIT_STATE_INITIALIZED && zoneIdsSame) {
             if (callback) {
                 callback();
             }
         } else {
             instance.callbacks = [instance.callbacks arrayByAddingObject:callback];
-
+            
             if (instance.initState != INIT_STATE_INITIALIZING) {
                 instance.initState = INIT_STATE_INITIALIZING;
-
+                
                 AdColonyGlobalMediationSettings *settings = [[MoPub sharedInstance] globalMediationSettingsForClass:[AdColonyGlobalMediationSettings class]];
                 AdColonyAppOptions *options = [AdColonyAppOptions new];
-
+                
                 if (userId && userId.length > 0) {
                     options.userID = userId;
                 } else if (settings && settings.customId.length > 0) {
                     options.userID = settings.customId;
                 }
-
+                
                 instance.currentAllZoneIds = allZoneIdsSet;
                 options.testMode = instance.testModeEnabled;
-
+                
                 [AdColony configureWithAppID:appId zoneIDs:allZoneIds options:options completion:^(NSArray<AdColonyZone *> * _Nonnull zones) {
                     @synchronized (instance) {
                         instance.initState = INIT_STATE_INITIALIZED;
-                        for (void(^localCallback)(void) in instance.callbacks) {
+                        for (void(^localCallback)() in instance.callbacks) {
                             localCallback();
                         }
                     }
@@ -73,10 +73,10 @@ typedef enum {
 
 + (void)enableClientSideTestMode {
     AdColonyController *instance = [AdColonyController sharedInstance];
-
+    
     @synchronized (instance) {
         instance.testModeEnabled = YES;
-
+        
         if (instance.initState == INIT_STATE_INITIALIZED || instance.initState == INIT_STATE_INITIALIZING) {
             AdColonyAppOptions *options = [AdColony getAppOptions];
             options.testMode = YES;
@@ -87,10 +87,10 @@ typedef enum {
 
 + (void)disableClientSideTestMode {
     AdColonyController *instance = [AdColonyController sharedInstance];
-
+    
     @synchronized (instance) {
         instance.testModeEnabled = NO;
-
+        
         if (instance.initState == INIT_STATE_INITIALIZED || instance.initState == INIT_STATE_INITIALIZING) {
             AdColonyAppOptions *options = [AdColony getAppOptions];
             options.testMode = NO;

@@ -1,9 +1,9 @@
 #import "MPRewardedVideoCustomEvent.h"
 
 /*
- * Certified with version 7.24.1 of the Google AdMob Ads SDK.
+ * Please reference the Supported Mediation Partner page at http://bit.ly/2mqsuFH for the
+ * latest version and ad format certifications.
  */
-
 @interface MPGoogleAdMobRewardedVideoCustomEvent : MPRewardedVideoCustomEvent
 
 @end

@@ -13,14 +13,11 @@
 
 // If you need to play ads with vungle options, you may modify playVungleAdFromRootViewController and create an options dictionary and call the playAd:withOptions: method on the vungle SDK.
 
-
-static NSString *const kVunglePlacementIdKey = @"pid";
-
-
 @interface VungleInterstitialCustomEvent () <MPVungleRouterDelegate>
 
 @property (nonatomic, assign) BOOL handledAdAvailable;
 @property (nonatomic, copy) NSString *placementId;
+@property (nonatomic, copy) NSDictionary *options;
 
 @end
 
@@ -32,7 +29,15 @@ static NSString *const kVunglePlacementIdKey = @"pid";
 - (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info
 {
     self.placementId = [info objectForKey:kVunglePlacementIdKey];
-
+    
+    NSMutableDictionary *options = [NSMutableDictionary dictionary];
+    
+    id flexViewAutoDismissSeconds = info[kVungleFlexViewAutoDismissSeconds];
+    if ([flexViewAutoDismissSeconds isKindOfClass:[NSNumber class]])
+        options[VunglePlayAdOptionKeyFlexViewAutoDismissSeconds] = flexViewAutoDismissSeconds;
+    
+    self.options = options.count ? options : nil;
+    
     self.handledAdAvailable = NO;
     [[MPVungleRouter sharedRouter] requestInterstitialAdWithCustomEventInfo:info delegate:self];
 }
@@ -40,7 +45,7 @@ static NSString *const kVunglePlacementIdKey = @"pid";
 - (void)showInterstitialFromRootViewController:(UIViewController *)rootViewController
 {
     if ([[MPVungleRouter sharedRouter] isAdAvailableForPlacementId:self.placementId]) {
-        [[MPVungleRouter sharedRouter] presentInterstitialAdFromViewController:rootViewController forPlacementId:self.placementId];
+        [[MPVungleRouter sharedRouter] presentInterstitialAdFromViewController:rootViewController options:self.options forPlacementId:self.placementId];
     } else {
         MPLogInfo(@"Failed to show Vungle video interstitial: Vungle now claims that there is no available video ad.");
         [self.delegate interstitialCustomEvent:self didFailToLoadAdWithError:nil];
@@ -55,7 +60,7 @@ static NSString *const kVunglePlacementIdKey = @"pid";
 - (void)handleVungleAdViewWillClose
 {
     MPLogInfo(@"Vungle video interstitial will disappear");
-
+    
     [self.delegate interstitialCustomEventWillDisappear:self];
     [self.delegate interstitialCustomEventDidDisappear:self];
 }
@@ -73,7 +78,7 @@ static NSString *const kVunglePlacementIdKey = @"pid";
 - (void)vungleAdWillAppear
 {
     MPLogInfo(@"Vungle video interstitial will appear");
-
+    
     [self.delegate interstitialCustomEventWillAppear:self];
     [self.delegate interstitialCustomEventDidAppear:self];
 }

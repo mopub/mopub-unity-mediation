@@ -14,8 +14,6 @@
 #import "VungleInstanceMediationSettings.h"
 #import "MPRewardedVideoCustomEvent+Caching.h"
 
-static NSString *const kVunglePlacementIdKey = @"pid";
-
 @interface VungleRewardedVideoCustomEvent ()  <MPVungleRouterDelegate>
 
 @property (nonatomic, copy) NSString *placementId;
@@ -33,10 +31,10 @@ static NSString *const kVunglePlacementIdKey = @"pid";
 - (void)requestRewardedVideoWithCustomEventInfo:(NSDictionary *)info
 {
     self.placementId = [info objectForKey:kVunglePlacementIdKey];
-
+    
     // Cache the initialization parameters
     [self setCachedInitializationParameters:info];
-
+    
     [[MPVungleRouter sharedRouter] requestRewardedVideoAdWithCustomEventInfo:info delegate:self];
 }
 
@@ -49,9 +47,10 @@ static NSString *const kVunglePlacementIdKey = @"pid";
 {
     if ([[MPVungleRouter sharedRouter] isAdAvailableForPlacementId:self.placementId]) {
         VungleInstanceMediationSettings *settings = [self.delegate instanceMediationSettingsForClass:[VungleInstanceMediationSettings class]];
-
+        
         NSString *customerId = [self.delegate customerIdForRewardedVideoCustomEvent:self];
-        [[MPVungleRouter sharedRouter] presentRewardedVideoAdFromViewController:viewController customerId:customerId settings:settings forPlacementId:self.placementId];
+        NSDictionary *eventInfo = [self cachedInitializationParameters];
+        [[MPVungleRouter sharedRouter] presentRewardedVideoAdFromViewController:viewController customerId:customerId settings:settings forPlacementId:self.placementId eventInfo:eventInfo];
     } else {
         MPLogInfo(@"Failed to show Vungle rewarded video: Vungle now claims that there is no available video ad.");
         NSError *error = [NSError errorWithDomain:MoPubRewardedVideoAdsSDKDomain code:MPRewardedVideoAdErrorNoAdsAvailable userInfo:nil];

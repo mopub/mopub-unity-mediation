@@ -12,7 +12,7 @@
 #endif
 
 /*
- * Certified with Chartboost 7.0.1
+ * Certified with Chartboost 6.6.3
  */
 @interface ChartboostRewardedVideoCustomEvent : MPRewardedVideoCustomEvent
 
