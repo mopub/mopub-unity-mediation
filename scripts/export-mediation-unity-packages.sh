@@ -9,7 +9,7 @@ source "$my_dir/validate.sh"
 UNITY_BIN=/Applications/Unity/Unity.app/Contents/MacOS/Unity
 PROJECT_PATH="`pwd`/unity-sample-app"
 OUT_DIR="`pwd`/unity-packages"
-SUPPORT_LIBS=( "AdColony" "AOL" "AdMob" "Chartboost" "AudienceNetwork" "UnityAds" "Vungle" )
+SUPPORT_LIBS=( "AdColony" "AdMob" "AOL" "AudienceNetwork" "Chartboost" "Flurry" "TapJoy" "UnityAds" "Vungle" )
 
 # Delete existing packages
 rm $OUT_DIR/* 2> /dev/null
