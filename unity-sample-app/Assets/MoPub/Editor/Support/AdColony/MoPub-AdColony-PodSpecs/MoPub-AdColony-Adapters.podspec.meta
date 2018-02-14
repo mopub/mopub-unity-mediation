@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 588d8cdd00213481795559c03cb5ec64
+<<<<<<< HEAD:unity-sample-app/Assets/MoPub/Editor/Support/AdColony/MoPub-AdColony-PodSpecs/MoPub-AdColony-Adapters.podspec.meta
 timeCreated: 1518641136
+=======
+timeCreated: 1518639973
+>>>>>>> master:unity-sample-app/Assets/MoPub/Editor/Support/AdColony/MoPub-AdColony-PodSpecs/MoPub-AdColony-Adapters.podspec.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

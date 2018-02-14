@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 23813e9f414514ef881217a9a886181c
+<<<<<<< HEAD:unity-sample-app/Assets/MoPub/Editor/Support/Chartboost/MoPub-Chartboost-PodSpecs/MoPub-Chartboost-Adapters.podspec.meta
 timeCreated: 1518641167
+=======
+timeCreated: 1518639995
+>>>>>>> master:unity-sample-app/Assets/MoPub/Editor/Support/Chartboost/MoPub-Chartboost-PodSpecs/MoPub-Chartboost-Adapters.podspec.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

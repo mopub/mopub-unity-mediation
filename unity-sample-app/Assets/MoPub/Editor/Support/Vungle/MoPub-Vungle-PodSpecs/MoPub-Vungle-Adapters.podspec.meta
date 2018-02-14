@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 259db5f38460a4d53a623dbaa7cf72bd
+<<<<<<< HEAD:unity-sample-app/Assets/MoPub/Editor/Support/Vungle/MoPub-Vungle-PodSpecs/MoPub-Vungle-Adapters.podspec.meta
 timeCreated: 1518641196
+=======
+timeCreated: 1518640016
+>>>>>>> master:unity-sample-app/Assets/MoPub/Editor/Support/Vungle/MoPub-Vungle-PodSpecs/MoPub-Vungle-Adapters.podspec.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
