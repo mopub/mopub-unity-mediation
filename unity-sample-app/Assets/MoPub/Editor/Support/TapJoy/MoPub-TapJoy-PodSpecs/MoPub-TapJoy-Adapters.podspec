@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'MoPub-TapJoy-Adapters'
-s.version          = '11.11.1.0'
+s.version          = '11.11.1.1'
 s.summary          = 'TapJoy Adapters for mediating through MoPub.'
 s.description      = <<-DESC
 Supported ad formats: Interstitial, Rewarded Video.\n
@@ -18,6 +18,6 @@ s.author           = { 'PoojaChirp' => 'pshashidhar@twitter.com' }
 s.source           = { :git => 'https://github.com/mopub/mopub-ios-mediation.git', :tag => 'master' }
 s.ios.deployment_target = '8.0'
 s.source_files = 'TapJoy/*.{h,m}'
-s.dependency 'mopub-ios-sdk', '~> 4.19.0'
+s.dependency 'mopub-ios-sdk', '~> 4.0'
 s.dependency 'TapjoySDK', '~> 11.0'
 end

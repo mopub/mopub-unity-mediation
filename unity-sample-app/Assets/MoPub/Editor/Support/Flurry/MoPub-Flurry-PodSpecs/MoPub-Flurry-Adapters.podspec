@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'MoPub-Flurry-Adapters'
-s.version          = '8.3.4.0'
+s.version          = '8.3.4.1'
 s.summary          = 'Flurry Adapters for mediating through MoPub.'
 s.description      = <<-DESC
 Supported ad formats:  Interstitial, Rewarded Video, Native.\n
@@ -18,7 +18,7 @@ s.author           = { 'PoojaChirp' => 'pshashidhar@twitter.com' }
 s.source           = { :git => 'https://github.com/mopub/mopub-ios-mediation.git', :tag => 'master' }
 s.ios.deployment_target = '8.0'
 s.source_files = 'Flurry/*.{h,m}'
-s.dependency 'mopub-ios-sdk', '~> 4.19.0'
+s.dependency 'mopub-ios-sdk', '~> 4.0'
 s.dependency 'Flurry-iOS-SDK/FlurrySDK', '~> 8.0'
 s.dependency 'Flurry-iOS-SDK/FlurryAds', '~> 8.0'
 end
