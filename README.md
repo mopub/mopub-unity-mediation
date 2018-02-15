@@ -3,9 +3,11 @@ This repository contains the necessary Unity Packages to mediate ads through thi
 
 ## Supported Networks
 * AdColony
-* AdMob
-* Chartboost
+* Google AdMob
+* AOL
 * Facebook Audience Network
-* Millennial
+* Chartboost
+* Flurry
+* TapJoy
 * Unity Ads
 * Vungle
