@@ -11,14 +11,15 @@ PROJECT_PATH="`pwd`/unity-sample-app"
 OUT_DIR="`pwd`/unity-packages"
 IOS_MEDIATION_DIR="mopub-ios-mediation"
 ANDROID_MEDIATION_DIR="mopub-android-mediation"
-SUPPORT_LIBS=( "AdColony" "AdMob" "AOL" "AudienceNetwork" "Chartboost" "Flurry" "TapJoy" "UnityAds" "Vungle" )
+# SUPPORT_LIBS=( "AdColony" "AdMob" "MoPub-OnebyAOL-Adapters" "AudienceNetwork" "Chartboost" "Flurry" "TapJoy" "UnityAds" "Vungle" )
+SUPPORT_LIBS=( "MoPub-OnebyAOL-Adapters" )
 
 # Update mediation submodules
 cd $IOS_MEDIATION_DIR
-git pull origin master
+git pull origin ADF-3266-rename-networks
 cd ..
 cd $ANDROID_MEDIATION_DIR
-git pull origin master
+git pull origin ADF-3266-rename-networks
 cd ..
 
 # Delete existing packages
@@ -30,14 +31,13 @@ do
     echo "Processing ${SUPPORT_LIB}..."
 
     # Gather necessary values
-    SUPPORT_LIB_LOWERCASE=`echo "${SUPPORT_LIB}" | tr '[:upper:]' '[:lower:]'`
     IOS_ADAPTER_DIR="${IOS_MEDIATION_DIR}/${SUPPORT_LIB}"
     IOS_EXPORT_DIR="Assets/MoPub/Editor/Support/${SUPPORT_LIB}"
-    IOS_PODSPEC_FILE="${IOS_ADAPTER_DIR}/MoPub-${SUPPORT_LIB}-PodSpecs/MoPub-${SUPPORT_LIB}-Adapters.podspec"
+    IOS_PODSPEC_FILE="${IOS_ADAPTER_DIR}/${SUPPORT_LIB}-PodSpecs/${SUPPORT_LIB}.podspec"
     IOS_ADAPTER_VERSION=`less $IOS_PODSPEC_FILE | grep s.version | sed "s/^.*'\([.0-9]*\)'.*/\1/"`
-    ANDROID_ADAPTER_JAR="${ANDROID_MEDIATION_DIR}/libs/${SUPPORT_LIB_LOWERCASE}-*.jar"
+    ANDROID_ADAPTER_JAR="${ANDROID_MEDIATION_DIR}/libs/${SUPPORT_LIB}-*.jar"
     ANDROID_EXPORT_DIR="Assets/Plugins/Android/mopub-support/libs/${SUPPORT_LIB}"
-    ANDROID_ADAPTER_VERSION=`echo $ANDROID_ADAPTER_JAR|sed "s/^.*${SUPPORT_LIB_LOWERCASE}-\([.0-9]*[^\.jar]\).*/\1/"`
+    ANDROID_ADAPTER_VERSION=`echo $ANDROID_ADAPTER_JAR|sed "s/^.*${SUPPORT_LIB}-\([.0-9]*[^\.jar]\).*/\1/"`
 
     # Delete existing adapters
     echo "Removing existing adapters..."
@@ -48,7 +48,7 @@ do
     echo "Copying new adapters..."
     cp -r "${IOS_ADAPTER_DIR}" "${PROJECT_PATH}/${IOS_EXPORT_DIR}"
     validate
-    cp $ANDROID_ADAPTER_JAR "${PROJECT_PATH}/${ANDROID_EXPORT_DIR}/${SUPPORT_LIB_LOWERCASE}-${ANDROID_ADAPTER_VERSION}.jar"
+    cp $ANDROID_ADAPTER_JAR "${PROJECT_PATH}/${ANDROID_EXPORT_DIR}/${SUPPORT_LIB}-${ANDROID_ADAPTER_VERSION}.jar"
     validate
 
     # Generate Unity package
