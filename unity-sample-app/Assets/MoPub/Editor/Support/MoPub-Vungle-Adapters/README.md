@@ -1,13 +1,7 @@
-# mopub-ios-mediation-Vungle
-
-Network SDK link - https://dashboard.vungle.com/sdk
-Supported Ad formats - Interstitials, Rewarded Videos
-
-Certifed date - 1/23/2018
-Certified network SDK version - 5.3.2
-Certified MoPub SDK version - 4.19.0
-Certified adapter version - 5.3.2.0
-
-Changes introduced - Introduction of Flex view ads
-https://github.com/mopub/mopub-ios-sdk/pull/232
-for more details, visit -https://support.vungle.com/hc/en-us/articles/360000131051-Native-Ads-Flex-View-Ads
+## Overview
+  * This folder contains mediation adapters used to mediate Vungle.
+  * To download and integrate the Vungle SDK, please check [this site](https://dashboard.vungle.com/sdk).
+  * For inquiries and support, please visit [support](https://support.vungle.com/hc/en-us/requests/new) forum.
+  
+## Adapter integration
+  * To integrate adapters, please visit our [integration tutorial](https://developers.mopub.com/docs/ios/integrating-networks/).

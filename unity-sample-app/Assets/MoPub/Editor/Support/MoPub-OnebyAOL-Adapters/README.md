@@ -1,11 +1,8 @@
-# mopub-ios-mediation-AOL
+## Overview
+  * This folder contains mediation adapters used to mediate OnebyAOL.
+  * To download and integrate the OnebyAOL SDK, please check [this tutorial](http://docs.onemobilesdk.aol.com/ios-ad-sdk/).
+  * For inquiries and support, please visit [support](https://tools.mmedia.com/user/supportDevPortal) forum.
+  
+## Adapter integration
+  * To integrate adapters, please visit our [integration tutorial](https://developers.mopub.com/docs/ios/integrating-networks/).
 
-Network SDK link - http://docs.onemobilesdk.aol.com/ios-ad-sdk/
-Supported Ad formats - Banners, Interstitials, Rewarded video, Natives
-
-Certifed date -11/2/2017
-Certified network SDK version - 6.6.0
-Certified MoPub SDK version - 4.17.0
-Certified adapter version - 6.6.0.0
-
-Changes introduced - No changes

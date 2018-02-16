@@ -1,12 +1,7 @@
-# mopub-ios-mediation-TapJoy
-
-Network SDK link - https://dev.tapjoy.com/sdk-integration/
-Supported Ad formats - Interstitials, Rewarded Videos
-
-Certifed date -  11/26/2017
-Certified network SDK version - 11.11.1
-Certified MoPub SDK version - 4.18.0
-Certified adapter version -11.11.1.0
-
-Changes introduced - None in the adapters.
-
+## Overview
+  * This folder contains mediation adapters used to mediate Tapjoy.
+  * To download and integrate the Tapjoy SDK, please check [this link](https://dev.tapjoy.com/sdk-integration/)
+  * For inquiries and support, please [email](https://dev.tapjoy.com/contact-support/).
+  
+## Adapter integration
+  * To integrate adapters, please visit our [integration tutorial](https://developers.mopub.com/docs/ios/integrating-networks/).

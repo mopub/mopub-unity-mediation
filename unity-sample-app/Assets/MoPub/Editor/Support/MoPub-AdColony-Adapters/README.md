@@ -1,11 +1,9 @@
-# mopub-ios-mediation-AdColony
 
-Network SDK link - https://github.com/AdColony/AdColony-iOS-SDK-3
-Supported Ad formats - Interstitials, Rewarded Video
+## Overview
+  * This folder contains mediation adapters used to mediate AdColony.
+  * To download and integrate the AdColony SDK, please check [this tutorial](https://github.com/AdColony/AdColony-iOS-SDK-3/wiki/Xcode-Project-Setup).
+  * For inquiries and support, please email support@adcolony.com.
+  
+## Adapter integration
+  * To integrate adapters, please visit our [integration tutorial](https://developers.mopub.com/docs/ios/integrating-networks/).
 
-Certifed date - 1/26/2018
-Certified network SDK version - 3.3.0
-Certified MoPub SDK version - 4.19.0
-Certified adapter version - 3.3.0.0
-
-Changes introduced - None in the adapters.

@@ -1,11 +1,7 @@
-# mopub-ios-mediation-Flurry
-
-Network SDK link - https://github.com/flurry/flurry-ios-sdk
-Supported Ad formats - Banners, Interstitials, Rewarded Videos, Native
-
-Certifed date - 1/23/2018
-Certified network SDK version -8.3.4.0
-Certified MoPub SDK version -4.19.0
-Certified adapter version -8.3.4.0
-
-Changes introduced - Minimal changes as suggested in the PR- https://github.com/mopub/mopub-ios-sdk/pull/225/files
+## Overview
+  * This folder contains mediation adapters used to mediate Flurry.
+  * To download and integrate the Flurry SDK, please check [this tutorial](https://github.com/flurry/flurry-ios-sdk).
+  * For inquiries and support, please visit [support](https://developer.yahoo.com/flurry/docs/faq/faqpublisher/iOS/) forum.
+  
+## Adapter integration
+  * To integrate adapters, please visit our [integration tutorial](https://developers.mopub.com/docs/ios/integrating-networks/).

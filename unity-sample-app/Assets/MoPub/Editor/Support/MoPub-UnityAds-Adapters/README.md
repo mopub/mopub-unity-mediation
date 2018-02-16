@@ -1,11 +1,7 @@
-# mopub-ios-mediation-Unity
-
-Network SDK link - https://github.com/Unity-Technologies/unity-ads-ios
-Supported Ad formats - Interstitials, Rewarded Videos
-
-Certifed date -11/29/2017
-Certified network SDK version - 2.1.2
-Certified MoPub SDK version - 4.18.0
-Certified adapter version -2.1.2.0
-
-Changes introduced - None in the adapters.
+## Overview
+  * This folder contains mediation adapters used to mediate UnityAds.
+  * To download and integrate the UnityAds SDK, please check [this site](https://github.com/Unity-Technologies/unity-ads-ios).
+  * For inquiries and support, please [email](unityads-support@unity3d.com).
+  
+## Adapter integration
+  * To integrate adapters, please visit our [integration tutorial](https://developers.mopub.com/docs/ios/integrating-networks/).
