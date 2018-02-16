@@ -11,8 +11,7 @@ PROJECT_PATH="`pwd`/unity-sample-app"
 OUT_DIR="`pwd`/unity-packages"
 IOS_MEDIATION_DIR="mopub-ios-mediation"
 ANDROID_MEDIATION_DIR="mopub-android-mediation"
-# SUPPORT_LIBS=( "AdColony" "AdMob" "MoPub-OnebyAOL-Adapters" "AudienceNetwork" "Chartboost" "Flurry" "TapJoy" "UnityAds" "Vungle" )
-SUPPORT_LIBS=( "MoPub-OnebyAOL-Adapters" )
+SUPPORT_LIBS=( "MoPub-AdColony-Adapters" "MoPub-AdMob-Adapters" "MoPub-OnebyAOL-Adapters" "MoPub-FacebookAudienceNetwork-Adapters" "MoPub-Chartboost-Adapters" "MoPub-Flurry-Adapters" "MoPub-Tapjoy-Adapters" "MoPub-UnityAds-Adapters" "MoPub-Vungle-Adapters" )
 
 # Update mediation submodules
 cd $IOS_MEDIATION_DIR
