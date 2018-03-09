@@ -31,7 +31,8 @@ public class MoPubDemoGUI : MonoBehaviour
         "Flurry",
         "TapJoy",
         "UnityAds",
-        "Vungle"
+        "Vungle",
+        "IronSource"
     };
 
     #if UNITY_ANDROID
@@ -49,7 +50,8 @@ public class MoPubDemoGUI : MonoBehaviour
         { "Chartboost", new string[] { "376366b49d324dedae3d5edb360c27b4" } },
         { "Flurry", new string[] { "a56eac0bacb8477f9c959b5364f8e569" } },
         { "TapJoy", new string[] { "81e9878e71b54d24bb220f42d702ff6f" } },
-        { "Vungle", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } }
+        { "Vungle", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } },
+        { "IronSource", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } }
     };
 
     private Dictionary<string, string[]> _rewardedVideoDict = new Dictionary<string, string[]> () {
@@ -58,7 +60,8 @@ public class MoPubDemoGUI : MonoBehaviour
         { "AudienceNetwork", new string[] { "7220c37b8e93499a8f0aff2eb4f0ad3d" } },
         { "Chartboost", new string[] { "df605ab15b56400285c99e521ecc2cb1" } },
         { "TapJoy", new string[] { "cbbcefe882e940daaab7fb6e15c6d2ec" } },
-        { "Vungle", new string[] { "6f21f1edd97944a185df00e850d61a98" } }
+        { "Vungle", new string[] { "6f21f1edd97944a185df00e850d61a98" } },
+        { "IronSource", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } }
     };
 
     private Dictionary<string, string[]> _rewardedRichMediaDict = new Dictionary<string, string[]> () {
@@ -78,7 +81,8 @@ public class MoPubDemoGUI : MonoBehaviour
         { "Chartboost", new string[] { "a425ff78959911e295fa123138070049" } },
         { "Flurry", new string[] { "49960150e2874e9294105af00a77b85c" } },
         { "TapJoy", new string[] { "83b8ccba00de4d27a2b6d97a3a0d80ce" } },
-        { "Vungle", new string[] { "20e01fce81f611e295fa123138070049" } }
+        { "Vungle", new string[] { "20e01fce81f611e295fa123138070049" } },
+        { "IronSource", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } }
     };
 
     private Dictionary<string, string[]> _rewardedVideoDict = new Dictionary<string, string[]> () {
@@ -89,7 +93,8 @@ public class MoPubDemoGUI : MonoBehaviour
         { "Chartboost", new string[] { "8be0bb08fb4f4e90a86416c29c235d4a" } },
         { "TapJoy", new string[] { "db8b4f8134664c4d91d3196a53c5aad9" } },
         { "UnityAds", new string[] { "676a0fa97aca48cbbe489de5b2fa4cd1" } },
-        { "Vungle", new string[] { "48274e80f11b496bb3532c4f59f28d12" } }
+        { "Vungle", new string[] { "48274e80f11b496bb3532c4f59f28d12" } },
+        { "IronSource", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } }
     };
 
     private Dictionary<string, string[]> _rewardedRichMediaDict = new Dictionary<string, string[]> () {
