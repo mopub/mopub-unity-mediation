@@ -1,8 +1,9 @@
 fileFormatVersion: 2
 guid: b26daa2affe7246ef9447d968549727a
-timeCreated: 1520624588
+timeCreated: 1521221480
 licenseType: Free
-DefaultImporter:
+TextScriptImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

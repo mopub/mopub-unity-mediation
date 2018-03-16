@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'MoPub-IronSource-Adapters'
-s.version          = '6.7.7.0'
+s.version          = '6.7.7.1'
 s.summary          = 'IronSource Adapters for mediating through MoPub.'
 s.description      = <<-DESC
 Supported ad formats: Interstitial, Rewarded Video.\n
@@ -19,6 +19,6 @@ s.source           = { :git => 'https://github.com/mopub/mopub-ios-mediation.git
 s.ios.deployment_target = '8.0'
 s.source_files = 'IronSource/*.{h,m}'
 s.dependency 'mopub-ios-sdk', '~> 4.0'
-s.dependency 'IronSourceSDK', '~> 6.0'
+s.dependency 'IronSourceSDK', '~> 6.7.7.0'
 end
 
