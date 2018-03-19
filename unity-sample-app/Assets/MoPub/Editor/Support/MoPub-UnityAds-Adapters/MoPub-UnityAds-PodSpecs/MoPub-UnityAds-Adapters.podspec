@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'MoPub-UnityAds-Adapters'
-s.version          = '2.1.1.3'
+s.version          = '2.2.0.0'
 s.summary          = 'Unity Adapters for mediating through MoPub.'
 s.description      = <<-DESC
 Supported ad formats: Interstitial, Rewarded Video.\n
@@ -19,6 +19,6 @@ s.source           = { :git => 'https://github.com/mopub/mopub-ios-mediation.git
 s.ios.deployment_target = '8.0'
 s.source_files = 'UnityAds/*.{h,m}'
 s.dependency 'mopub-ios-sdk', '~> 4.0'
-s.dependency 'UnityAds', '~> 2.0'
+s.dependency 'UnityAds', '~> 2.2.0'
 end
 

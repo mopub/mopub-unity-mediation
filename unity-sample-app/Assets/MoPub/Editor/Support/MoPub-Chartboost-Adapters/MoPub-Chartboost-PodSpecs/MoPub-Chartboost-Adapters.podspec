@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'MoPub-Chartboost-Adapters'
-s.version          = '7.0.4.1'
+s.version          = '7.0.4.2'
 s.summary          = 'Chartboost Adapters for mediating through MoPub.'
 s.description      = <<-DESC
 Supported ad formats: Interstitial, Rewarded Video.\n
@@ -19,5 +19,5 @@ s.source           = { :git => 'https://github.com/mopub/mopub-ios-mediation.git
 s.ios.deployment_target = '8.0'
 s.source_files = 'Chartboost/*.{h,m}'
 s.dependency 'mopub-ios-sdk', '~> 4.0'
-s.dependency 'ChartboostSDK', '~> 7.0'
+s.dependency 'ChartboostSDK', '~> 7.0.4'
 end

@@ -31,9 +31,6 @@ static BOOL gVideoEnabled = NO;
 
 - (void)requestAdWithCustomEventInfo:(NSDictionary *)info
 {
-    //test mode on
-    NSString *testDeviceHash = FBAdSettings.testDeviceHash;
-    [FBAdSettings addTestDevice: testDeviceHash];
     NSString *placementID = [info objectForKey:@"placement_id"];
 
     if ([info objectForKey:kFBVideoAdsEnabledKey] == nil) {

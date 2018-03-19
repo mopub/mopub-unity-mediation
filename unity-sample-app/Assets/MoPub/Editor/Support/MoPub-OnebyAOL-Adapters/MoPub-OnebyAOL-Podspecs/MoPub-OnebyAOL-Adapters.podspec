@@ -5,7 +5,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'MoPub-OnebyAOL-Adapters'
-s.version          = '6.6.0.1'
+s.version          = '6.6.0.2'
 s.summary          = 'Aol Adapters for mediating through MoPub.'
 s.description      = <<-DESC
 Supported ad formats: Banner, Interstitial, Rewarded Video, Native.\n
@@ -20,5 +20,5 @@ s.ios.deployment_target = '8.0'
 s.source_files = 'OnebyAOL/*.{h,m}'
 s.exclude_files = 'MPStaticNativeAdImpressionTimer.{h,m}'
 s.dependency 'mopub-ios-sdk', '~> 4.0'
-s.dependency 'MMAdSDK', '~> 6.0'
+s.dependency 'MMAdSDK', '~> 6.6.0'
 end

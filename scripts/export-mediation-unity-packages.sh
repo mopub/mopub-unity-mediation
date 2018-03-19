@@ -11,7 +11,7 @@ PROJECT_PATH="`pwd`/unity-sample-app"
 OUT_DIR="`pwd`/unity-packages"
 IOS_MEDIATION_DIR="mopub-ios-mediation"
 ANDROID_MEDIATION_DIR="mopub-android-mediation"
-SUPPORT_LIBS=( "AdColony" "AdMob" "Chartboost" "FacebookAudienceNetwork" "Flurry" "OnebyAOL" "Tapjoy" "UnityAds" "Vungle" "IronSource")
+SUPPORT_LIBS=( "AdColony" "AdMob" "Chartboost" "FacebookAudienceNetwork" "Flurry" "IronSource" "OnebyAOL" "Tapjoy" "UnityAds" "Vungle" "IronSource")
 #For new networks, create relevant android/ios directories for your network. Use ANDROID_EXPORT_DIR, IOS_EXPORT_DIR for your reference.
 
 # Update mediation submodules
