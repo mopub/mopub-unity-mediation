@@ -26,6 +26,7 @@ public class MoPubDemoGUI : MonoBehaviour
         "AdColony",
         "AdMob",
         "AOL",
+        "AppLovin",
         "AudienceNetwork",
         "Chartboost",
         "Flurry",
@@ -39,6 +40,7 @@ public class MoPubDemoGUI : MonoBehaviour
     private Dictionary<string, string[]> _bannerDict = new Dictionary<string, string[]> () {
         { "AdMob", new string[] { "95031808b2a6413da9f0a3543fd29bf7" } },
         { "AOL", new string[] { "1aa442709c9f11e281c11231392559e4" } },
+        { "AppLovin", new string[] { "3bb1e241a91040d79c4194dd476b9c60" } },
         { "AudienceNetwork", new string[] { "b40a96dd275e4ce5be2cdf5faa92007d" } }
     };
 
@@ -46,6 +48,7 @@ public class MoPubDemoGUI : MonoBehaviour
         { "AdColony", new string[] { "3aa79f11389540db8e250a80e4d16a46" } },
         { "AdMob", new string[] { "b83d52ca5f864e84a32e58c85086e6b2" } },
         { "AOL", new string[] { "7c8428e5acf94811b03d5d788e6b4c45" } },
+        { "AppLovin", new string[] { "d960ac7f90d041c8a4d817726a76a2fa" } },
         { "AudienceNetwork", new string[] { "9792d876011f4359887d2d26380e8a84" } },
         { "Chartboost", new string[] { "376366b49d324dedae3d5edb360c27b4" } },
         { "Flurry", new string[] { "a56eac0bacb8477f9c959b5364f8e569" } },
@@ -57,6 +60,7 @@ public class MoPubDemoGUI : MonoBehaviour
     private Dictionary<string, string[]> _rewardedVideoDict = new Dictionary<string, string[]> () {
         { "AdColony", new string[] { "e258c916e659447d9d98256a3ab2979e" } },
         { "AdMob", new string[] { "49a4a502ed2945fd92bc5798c9421a57" } },
+        { "AppLovin", new string[] { "b28c982f77dd4c68a9e36ab7a1a87c1a" } },
         { "AudienceNetwork", new string[] { "7220c37b8e93499a8f0aff2eb4f0ad3d" } },
         { "Chartboost", new string[] { "df605ab15b56400285c99e521ecc2cb1" } },
         { "TapJoy", new string[] { "cbbcefe882e940daaab7fb6e15c6d2ec" } },
@@ -71,12 +75,14 @@ public class MoPubDemoGUI : MonoBehaviour
     private Dictionary<string, string[]> _bannerDict = new Dictionary<string, string[]> () {
         { "AdMob", new string[] { "c9c2ea9a8e1249b68496978b072d2fd2" } },
         { "AOL", new string[] { "b506db1f3e054c78bff513f188727748" } },
+        { "AppLovin", new string[] { "1e3442763b3b498692fc8d817f23df61" } },
         { "AudienceNetwork", new string[] { "446dfa864dcb4469965267694a940f3d" } }
     };
 
     private Dictionary<string, string[]> _interstitialDict = new Dictionary<string, string[]> () {
         { "AdMob", new string[] { "744e217f8adc4dec89c87481c9c4006a" } },
         { "AOL", new string[] { "93c3fc00fbb54825b6a33b20927315f7" } },
+        { "AppLovin", new string[] { "a6ba011d4ac9421c97606757b8f4f619" } },       
         { "AudienceNetwork", new string[] { "cec4c5ea0ff140d3a15264da23449f97" } },
         { "Chartboost", new string[] { "a425ff78959911e295fa123138070049" } },
         { "Flurry", new string[] { "49960150e2874e9294105af00a77b85c" } },
@@ -89,6 +95,7 @@ public class MoPubDemoGUI : MonoBehaviour
         { "AdColony", new string[] { "52aa460767374250a5aa5174c2345be3" } },
         { "AdMob", new string[] { "0ceacb73895748ceadf0048a1f989855" } },
         { "AOL", new string[] { "1908cd1ff0934f69bac04c316accc854" } },
+        { "AppLovin", new string[] { "86edb2116ff24fc680697ac105b863b3" } },
         { "AudienceNetwork", new string[] { "5a138cf1a03643ca851647d2b2e20d0d" } },
         { "Chartboost", new string[] { "8be0bb08fb4f4e90a86416c29c235d4a" } },
         { "TapJoy", new string[] { "db8b4f8134664c4d91d3196a53c5aad9" } },
