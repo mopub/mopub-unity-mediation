@@ -54,7 +54,7 @@ public class MoPubDemoGUI : MonoBehaviour
         { "Flurry", new string[] { "a56eac0bacb8477f9c959b5364f8e569" } },
         { "TapJoy", new string[] { "81e9878e71b54d24bb220f42d702ff6f" } },
         { "Vungle", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } },
-        { "IronSource", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } },
+        { "IronSource", new string[] { "4f5e1e97f87c406cb7878b9eff1d2a77" } }
     };
 
     private Dictionary<string, string[]> _rewardedVideoDict = new Dictionary<string, string[]> () {
