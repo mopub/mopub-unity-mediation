@@ -3,6 +3,7 @@ This repository contains the necessary Unity Packages to mediate ads through thi
 
 ## Supported Networks
 * AdColony
+* AppLovin
 * Google AdMob
 * AOL
 * Facebook Audience Network
