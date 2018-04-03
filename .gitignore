@@ -1,0 +1,4 @@
+# NOTE: Unity-specific ignores are at unity-sample-app/.gitignore
+
+# OS X
+*.DS_Store
