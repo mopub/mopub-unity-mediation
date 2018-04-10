@@ -59,6 +59,7 @@ rxjava*.jar*
 *.user
 *.userprefs
 *.pidb
+*.pidb.meta
 *.booproj
 
 # Unity3D Generated File On Crash Reports
