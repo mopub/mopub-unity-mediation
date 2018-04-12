@@ -1,4 +1,5 @@
 ## Changelog
+
   * 6.6.0.1
     * This version of the adapters has been certified with One by AOL 6.6.0.
 
