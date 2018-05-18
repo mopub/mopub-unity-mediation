@@ -5,6 +5,7 @@
 #import "IronSourceInterstitialCustomEvent.h"
 #import "MPLogging.h"
 #import "IronSourceConstants.h"
+#import "MoPub.h"
 
 @interface IronSourceInterstitialCustomEvent()
 @property (nonatomic, strong) NSString *placementName;
@@ -21,6 +22,12 @@ static BOOL initInterstitialSuccessfully;
 
 - (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info {
     
+    // Collect and pass the user's consent from MoPub onto the ironSource SDK
+    if ([[MoPub sharedInstance] isGDPRApplicable] == MPBoolYes) {
+        BOOL canCollectPersonalInfo = [[MoPub sharedInstance] canCollectPersonalInfo];
+        [IronSource setConsent:canCollectPersonalInfo];
+    }
+
     NSString *applicationKey = @"";
     _instanceId = @"0";
     
