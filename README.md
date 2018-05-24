@@ -4,5 +4,5 @@ This repository contains the necessary Unity Packages to mediate ads through thi
 ## Testing Mediation
 To test MoPub Unity Mediation, please start with these steps:
 1. Clone the [MoPub Unity SDK repository](https://github.com/mopub/mopub-unity-sdk)
-1. Open the Unity project under `unity-sample-app/` in the `mopup-unity-sdk` repository
-1. Import the desired packages from `unity-packages/` in this repository
+1. Open the Unity project under `unity-sample-app/` in the [MoPub Unity SDK repository](https://github.com/mopub/mopub-unity-sdk)
+1. Import the desired packages from `unity-packages/` in the [current repository](https://github.com/mopub/mopub-unity-mediation)
