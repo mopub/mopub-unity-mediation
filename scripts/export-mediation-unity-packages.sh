@@ -41,7 +41,7 @@ do
     NETWORK_ADAPTERS_NAME="MoPub-${SUPPORT_LIB}-Adapters"
     NETWORK_ADAPTERS_NAME_LOWERCASE=`echo "${NETWORK_ADAPTERS_NAME}" | tr '[:upper:]' '[:lower:]'`
     IOS_ADAPTER_DIR="${IOS_MEDIATION_DIR}/${SUPPORT_LIB}"
-    IOS_EXPORT_DIR="Assets/Plugins/iOS/"
+    IOS_EXPORT_DIR="Assets/Plugins/iOS/MoPub-Mediation-Adapters"
     IOS_PODSPEC_FILE="${IOS_ADAPTER_DIR}/MoPub-${SUPPORT_LIB}-PodSpecs/${NETWORK_ADAPTERS_NAME}.podspec"
     IOS_ADAPTER_VERSION=`less $IOS_PODSPEC_FILE | grep s.version | sed "s/^.*'\([.0-9]*\)'.*/\1/"`
     ANDROID_ADAPTER_JAR="${ANDROID_MEDIATION_DIR}/libs/${NETWORK_ADAPTERS_NAME_LOWERCASE}-*.jar"
