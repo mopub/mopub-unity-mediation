@@ -9,7 +9,9 @@ source "$my_dir/validate.sh"
 # NOTE: this script requires the mopub-unity-sdk repository to be present as a sibling of this one
 
 UNITY_BIN=/Applications/Unity/Unity.app/Contents/MacOS/Unity
-PROJECT_PATH="`pwd`/../mopub-unity-sdk/unity-sample-app"
+# TODO: Revert to public repo before merging to master!
+PROJECT_PATH="`pwd`/../mopub-unity/unity-sample-app"
+NETWORK_INSTALLERS_DIR="`pwd`/mopub-unity-adapters"
 OUT_DIR="`pwd`/unity-packages"
 IOS_MEDIATION_DIR="mopub-ios-mediation"
 ANDROID_MEDIATION_DIR="mopub-android-mediation"
