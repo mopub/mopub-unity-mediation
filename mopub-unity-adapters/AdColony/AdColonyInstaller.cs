@@ -1,4 +1,4 @@
 public class AdColonyInstaller
 {
-    // TODO
+    // TODO: implement installer
 }
