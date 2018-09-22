@@ -43,14 +43,25 @@ _  / / /__  __ \_  /_  __/_  / / /    __  __/  __  |/_/__  __ \  __ \_  ___/  __
                          /____/                       /_/                       
 "
 echo "${WELCOME}"
-echo "This script will generate a new Unity package for the desired Network."
-echo "Press 'Enter' to update Android and iOS Mediation submodules, 's' to skip updating, or 'Ctrl-C' to exit."
-read skip
-skip=${skip:-update}
+printf "This script will generate a new Unity package for the desired Network.\n\n"
+echo "Select one of the options below to continue..."
 
-if [ $skip != "s" ]; then
+PS3='Your choice: '
+options=(
+    "Update Android and iOS Mediation submodules and continue"
+    "Continue without updating submodules"
+)
+select opt in "${options[@]}" "Abort and exit"; do
+    case "$REPLY" in
+        1 ) printf "\n${LOG_PREFIX}Updating submodules...\n"; break;;
+        2 ) printf "\nContinuing without updating submodules...\n"; break;;
+        $(( ${#options[@]}+1 )) ) echo "Goodbye!"; exit 0;;
+        *) echo "Invalid option. Try another one.";continue;;
+    esac
+done
+
+if [ $REPLY == 1 ]; then
     # Update mediation submodules
-    printf "${LOG_PREFIX}Updating submodules...\n"
     cd $IOS_MEDIATION_DIR
     git checkout master
     git pull origin master
@@ -62,21 +73,15 @@ if [ $skip != "s" ]; then
     printf "${LOG_PREFIX}...done updating submodules!\n"
 fi
 
-# Ask for which Network to export
-i=1
 printf "\nWhich Network do you want to update?\n"
-for SUPPORT_LIB in "${SUPPORT_LIBS[@]}"
-do
-    echo "[${i}] ${SUPPORT_LIB}"
-    let i++
+select opt in "${SUPPORT_LIBS[@]}"; do
+    if [ $opt ]; then
+        NETWORK=$opt
+        printf "\nSelected Network: ${NETWORK}\n";break;
+    else
+        echo "Invalid option. Try another one.";continue;
+    fi
 done
-read -p "Enter a number listed above: " network_index
-if [[ $network_index != [0-9]* ]] || [ $network_index -lt 1 ] || [ $network_index -gt ${#SUPPORT_LIBS[@]} ]; then
-    echo "Invalid selection! Aborting."
-    exit 1
-fi
-NETWORK=${SUPPORT_LIBS[network_index-1]}
-echo "Selected Network: ${NETWORK}"
 
 # Gather necessary values
 NETWORK_ADAPTERS_NAME="MoPub-${NETWORK}-Adapters"
@@ -92,14 +97,20 @@ ANDROID_ADAPTER_VERSION=`echo $ANDROID_ADAPTER_JAR | sed "s/^.*${NETWORK_ADAPTER
 ANDROID_SDK_VERSION=`echo ${ANDROID_ADAPTER_VERSION%.*}`
 UNITY_SCRIPTS_DIR="${UNITY_MEDIATION_DIR}/${NETWORK}"
 UNITY_ADAPTER_VERSION_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}AdapterVersion.cs"
-UNITY_ADAPTER_VERSION=`less $UNITY_ADAPTER_VERSION_FILE | grep string\ _name | sed "s/^.*\"\([.0-9]*\)\".*/\1/"`
+UNITY_ADAPTER_VERSION=`less $UNITY_ADAPTER_VERSION_FILE | grep string\ _number | sed "s/^.*\"\([.0-9]*\)\".*/\1/"`
 UNITY_ANDROID_SDK_VERSION_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}AndroidSDKVersion.cs"
 UNITY_IOS_SDK_VERSION_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}IOSSDKVersion.cs"
 UNITY_SCRIPTS_EXPORT_DIR="${MOPUB_MEDIATION_UNITY_ROOT}/${NETWORK}/Editor"
 
+if [ -z "$UNITY_ADAPTER_VERSION" ]; then
+    echo "FATAL: Unable to read current adapter version from ${UNITY_ADAPTER_VERSION_FILE}"
+    echo "Aborting!"
+    exit 1
+fi
+
 echo "Current adapter version: ${UNITY_ADAPTER_VERSION}"
 echo "Which adapter version are you exporting now?"
-read new_version
+read -p "New version: " new_version
 if [[ $new_version != [.0-9]* ]]; then
     echo "Invalid version number! Aborting."
     exit 1
@@ -113,7 +124,6 @@ read -p "Press 'Enter' to continue or 'Ctrl-C' to abort."
 rm $OUT_DIR/*$NETWORK*
 
 # Update Adapter and SDK version numbers
-# TODO: Read adapter version bump from command line
 sed -i "" -e "s/\"[.0-9]*\"/\"${IOS_SDK_VERSION}\"/g" $UNITY_IOS_SDK_VERSION_FILE
 sed -i "" -e "s/\"[.0-9]*\"/\"${ANDROID_SDK_VERSION}\"/g" $UNITY_ANDROID_SDK_VERSION_FILE
 
