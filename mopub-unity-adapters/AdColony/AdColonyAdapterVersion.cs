@@ -1,9 +1,9 @@
 public class AdColonyAdapterVersion : Version
 {
-    private const string _name = "1.1";
+    private const string _number = "1.0";
 
-    public override string Name
+    public override string Number
     {
-        get { return _name; }
+        get { return _number; }
     }
 }

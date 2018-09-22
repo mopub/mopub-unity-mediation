@@ -1,9 +1,9 @@
 public class AdColonyIOSSDKVersion : Version
 {
-    private const string _name = "3.3.5";
+    private const string _number = "3.3.5";
 
-    public override string Name
+    public override string Number
     {
-        get { return _name; }
+        get { return _number; }
     }
 }
