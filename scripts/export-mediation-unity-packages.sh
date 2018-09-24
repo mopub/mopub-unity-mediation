@@ -108,8 +108,11 @@ if [ -z "$UNITY_ADAPTER_VERSION" ]; then
     exit 1
 fi
 
-echo "Current adapter version: ${UNITY_ADAPTER_VERSION}"
-echo "Which adapter version are you exporting now?"
+echo "Current adapter versions:"
+printf "> Android:  ${ANDROID_ADAPTER_VERSION}\n"
+printf "> iOS:      ${IOS_ADAPTER_VERSION}\n"
+printf "> Unity:    ${UNITY_ADAPTER_VERSION}\n"
+echo "Which Unity adapter version are you exporting now?"
 read -p "New version: " new_version
 if [[ $new_version != [.0-9]* ]]; then
     echo "Invalid version number! Aborting."
