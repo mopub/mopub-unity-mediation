@@ -1,4 +1,4 @@
 public class AdMobInstaller
 {
-    // TODO: implement installer
+    // TODO: implement installer (if needed)
 }

@@ -8,7 +8,8 @@ source "$my_dir/validate.sh"
 
 # NOTE: this script requires the mopub-unity-sdk repository to be present as a sibling of this one
 
-UNITY_BIN=/Applications/Unity/Unity.app/Contents/MacOS/Unity
+# TODO: revert to root Unity
+UNITY_BIN=/Applications/Unity/2018.2.3f1/Unity.app/Contents/MacOS/Unity
 
 # **********************************************************
 # TODO: Revert to public repo before merging to master!
@@ -96,14 +97,13 @@ ANDROID_EXPORT_DIR="${MOPUB_MEDIATION_UNITY_ROOT}/${NETWORK}/Adapter/Android"
 ANDROID_ADAPTER_VERSION=`echo $ANDROID_ADAPTER_JAR | sed "s/^.*${NETWORK_ADAPTERS_NAME_LOWERCASE}-\([.0-9]*[^\.jar]\).*/\1/"`
 ANDROID_SDK_VERSION=`echo ${ANDROID_ADAPTER_VERSION%.*}`
 UNITY_SCRIPTS_DIR="${UNITY_MEDIATION_DIR}/${NETWORK}"
-UNITY_ADAPTER_VERSION_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}AdapterVersion.cs"
-UNITY_ADAPTER_VERSION=`less $UNITY_ADAPTER_VERSION_FILE | grep string\ _number | sed "s/^.*\"\([.0-9]*\)\".*/\1/"`
-UNITY_ANDROID_SDK_VERSION_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}AndroidSDKVersion.cs"
-UNITY_IOS_SDK_VERSION_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}IOSSDKVersion.cs"
+UNITY_ADAPTER_CONFIG_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}AdapterConfig.cs"
+UNITY_ADAPTER_DEPS_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}Dependencies.xml"
+UNITY_ADAPTER_VERSION=`less $UNITY_ADAPTER_CONFIG_FILE | grep string\ _version | sed "s/^.*\"\([.0-9]*\)\".*/\1/"`
 UNITY_SCRIPTS_EXPORT_DIR="${MOPUB_MEDIATION_UNITY_ROOT}/${NETWORK}/Editor"
 
 if [ -z "$UNITY_ADAPTER_VERSION" ]; then
-    echo "FATAL: Unable to read current adapter version from ${UNITY_ADAPTER_VERSION_FILE}"
+    echo "FATAL: Unable to read current adapter version from ${UNITY_ADAPTER_CONFIG_FILE}"
     echo "Aborting!"
     exit 1
 fi
@@ -127,8 +127,9 @@ read -p "Press 'Enter' to continue or 'Ctrl-C' to abort."
 rm $OUT_DIR/*$NETWORK*
 
 # Update Adapter and SDK version numbers
-sed -i "" -e "s/\"[.0-9]*\"/\"${IOS_SDK_VERSION}\"/g" $UNITY_IOS_SDK_VERSION_FILE
-sed -i "" -e "s/\"[.0-9]*\"/\"${ANDROID_SDK_VERSION}\"/g" $UNITY_ANDROID_SDK_VERSION_FILE
+# TODO: update dependency versions
+# sed -i "" -e "s/\"[.0-9]*\"/\"${IOS_SDK_VERSION}\"/g" $UNITY_IOS_SDK_VERSION_FILE
+# sed -i "" -e "s/\"[.0-9]*\"/\"${ANDROID_SDK_VERSION}\"/g" $UNITY_ANDROID_SDK_VERSION_FILE
 
 # Delete existing adapters
 echo "Removing existing adapters..."
@@ -146,6 +147,8 @@ cp $ANDROID_ADAPTER_JAR "${PROJECT_PATH}/${ANDROID_EXPORT_DIR}/${NETWORK_ADAPTER
 validate
 mkdir -p "${PROJECT_PATH}/${UNITY_SCRIPTS_EXPORT_DIR}"
 cp $UNITY_SCRIPTS_DIR/*.cs "${PROJECT_PATH}/${UNITY_SCRIPTS_EXPORT_DIR}/"
+validate
+cp $UNITY_SCRIPTS_DIR/${NETWORK}Dependencies.xml "${PROJECT_PATH}/${UNITY_SCRIPTS_EXPORT_DIR}/"
 validate
 
 # Generate Unity package
