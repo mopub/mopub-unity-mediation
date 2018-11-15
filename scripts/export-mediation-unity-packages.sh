@@ -8,6 +8,9 @@ source "$my_dir/validate.sh"
 
 # NOTE: this script requires the mopub-unity-sdk repository to be present as a sibling of this one
 
+# Set this to true to simply print captured values and exit
+DEBUG_ONLY=false
+
 # TODO: revert to root Unity
 UNITY_BIN=/Applications/Unity/2018.2.3f1/Unity.app/Contents/MacOS/Unity
 
@@ -24,6 +27,8 @@ ANDROID_MEDIATION_DIR="mopub-android-mediation"
 UNITY_MEDIATION_DIR="mopub-unity-adapters"
 SUPPORT_LIBS=( "AdColony" "AdMob" "AppLovin" "Chartboost" "FacebookAudienceNetwork" "Flurry" "IronSource" "OnebyAOL" "Tapjoy" "UnityAds" "Vungle" "IronSource")
 LOG_PREFIX="[MoPub Script] "
+VERSION_IN_DEPS_SPEC_REGEX="s/^.*\"[-.:a-z]*\([0-9.]*\)\".*/\1/"
+VERSION_IN_DEPS_VERSION_REGEX="s/^.*version=\"[-.:a-z]*\([0-9.]*\)\".*/\1/"
 
 # Check sample app under mopub-unity-sdk exists
 ls $PROJECT_PATH 1> /dev/null
@@ -101,6 +106,42 @@ UNITY_ADAPTER_CONFIG_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}AdapterConfig.cs"
 UNITY_ADAPTER_DEPS_FILE="${UNITY_SCRIPTS_DIR}/${NETWORK}Dependencies.xml"
 UNITY_ADAPTER_VERSION=`less $UNITY_ADAPTER_CONFIG_FILE | grep string\ _version | sed "s/^.*\"\([.0-9]*\)\".*/\1/"`
 UNITY_SCRIPTS_EXPORT_DIR="${MOPUB_MEDIATION_UNITY_ROOT}/${NETWORK}/Editor"
+DEPS_IOS_POD_MOPUB=`xpath ${UNITY_ADAPTER_DEPS_FILE} '/dependencies/iosPods/iosPod[contains(@name, "MoPub")]' 2> /dev/null`
+DEPS_IOS_POD_NETWORK=`xpath ${UNITY_ADAPTER_DEPS_FILE} '/dependencies/iosPods/iosPod[not(contains(@name, "MoPub"))]' 2> /dev/null`
+DEPS_IOS_MOPUB_VERSION=`echo ${DEPS_IOS_POD_MOPUB} | sed ${VERSION_IN_DEPS_VERSION_REGEX}`
+DEPS_IOS_NETWORK_VERSION=`echo ${DEPS_IOS_POD_NETWORK} | sed ${VERSION_IN_DEPS_VERSION_REGEX}`
+DEPS_ANDROID_PACKAGE_MOPUB=`xpath ${UNITY_ADAPTER_DEPS_FILE} '/dependencies/androidPackages/androidPackage[contains(@spec, "mopub")]/@spec' 2> /dev/null`
+DEPS_ANDROID_PACKAGE_NETWORK=`xpath ${UNITY_ADAPTER_DEPS_FILE} '/dependencies/androidPackages/androidPackage[not(contains(@spec, "mopub"))]/@spec' 2> /dev/null`
+DEPS_ANDROID_MOPUB_VERSION=`echo ${DEPS_ANDROID_PACKAGE_MOPUB} | sed ${VERSION_IN_DEPS_SPEC_REGEX}`
+DEPS_ANDROID_NETWORK_VERSION=`echo ${DEPS_ANDROID_PACKAGE_NETWORK} | sed ${VERSION_IN_DEPS_SPEC_REGEX}`
+if $DEBUG_ONLY; then
+    echo "DEBUG_ONLY mode; printing values and exiting..."
+    echo "NETWORK_ADAPTERS_NAME:" $NETWORK_ADAPTERS_NAME
+    echo "NETWORK_ADAPTERS_NAME_LOWERCASE:" $NETWORK_ADAPTERS_NAME_LOWERCASE
+    echo "IOS_ADAPTER_DIR:" $IOS_ADAPTER_DIR
+    echo "IOS_EXPORT_DIR:" $IOS_EXPORT_DIR
+    echo "IOS_PODSPEC_FILE:" $IOS_PODSPEC_FILE
+    echo "IOS_ADAPTER_VERSION:" $IOS_ADAPTER_VERSION
+    echo "IOS_SDK_VERSION:" $IOS_SDK_VERSION
+    echo "ANDROID_ADAPTER_JAR:" $ANDROID_ADAPTER_JAR
+    echo "ANDROID_EXPORT_DIR:" $ANDROID_EXPORT_DIR
+    echo "ANDROID_ADAPTER_VERSION:" $ANDROID_ADAPTER_VERSION
+    echo "ANDROID_SDK_VERSION:" $ANDROID_SDK_VERSION
+    echo "UNITY_SCRIPTS_DIR:" $UNITY_SCRIPTS_DIR
+    echo "UNITY_ADAPTER_CONFIG_FILE:" $UNITY_ADAPTER_CONFIG_FILE
+    echo "UNITY_ADAPTER_DEPS_FILE:" $UNITY_ADAPTER_DEPS_FILE
+    echo "UNITY_ADAPTER_VERSION:" $UNITY_ADAPTER_VERSION
+    echo "UNITY_SCRIPTS_EXPORT_DIR:" $UNITY_SCRIPTS_EXPORT_DIR
+    echo "DEPS_IOS_POD_MOPUB:" $DEPS_IOS_POD_MOPUB
+    echo "DEPS_IOS_POD_NETWORK:" $DEPS_IOS_POD_NETWORK
+    echo "DEPS_IOS_MOPUB_VERSION:" $DEPS_IOS_MOPUB_VERSION
+    echo "DEPS_IOS_NETWORK_VERSION:" $DEPS_IOS_NETWORK_VERSION
+    echo "DEPS_ANDROID_PACKAGE_MOPUB:" $DEPS_ANDROID_PACKAGE_MOPUB
+    echo "DEPS_ANDROID_PACKAGE_NETWORK:" $DEPS_ANDROID_PACKAGE_NETWORK
+    echo "DEPS_ANDROID_MOPUB_VERSION:" $DEPS_ANDROID_MOPUB_VERSION
+    echo "DEPS_ANDROID_NETWORK_VERSION:" $DEPS_ANDROID_NETWORK_VERSION
+    exit 0
+fi
 
 if [ -z "$UNITY_ADAPTER_VERSION" ]; then
     echo "FATAL: Unable to read current adapter version from ${UNITY_ADAPTER_CONFIG_FILE}"
@@ -126,10 +167,14 @@ read -p "Press 'Enter' to continue or 'Ctrl-C' to abort."
 # Delete existing packages
 rm $OUT_DIR/*$NETWORK*
 
-# Update Adapter and SDK version numbers
-# TODO: update dependency versions
-# sed -i "" -e "s/\"[.0-9]*\"/\"${IOS_SDK_VERSION}\"/g" $UNITY_IOS_SDK_VERSION_FILE
-# sed -i "" -e "s/\"[.0-9]*\"/\"${ANDROID_SDK_VERSION}\"/g" $UNITY_ANDROID_SDK_VERSION_FILE
+# Update Adapter and SDK version numbers in dependencies and adapter config
+sed -i "" -e "s/${DEPS_IOS_MOPUB_VERSION}/${IOS_ADAPTER_VERSION}/1" $UNITY_ADAPTER_DEPS_FILE
+sed -i "" -e "s/${DEPS_IOS_NETWORK_VERSION}/${IOS_SDK_VERSION}/1" $UNITY_ADAPTER_DEPS_FILE
+sed -i "" -e "s/${DEPS_ANDROID_MOPUB_VERSION}/${ANDROID_ADAPTER_VERSION}/1" $UNITY_ADAPTER_DEPS_FILE
+sed -i "" -e "s/${DEPS_ANDROID_NETWORK_VERSION}/${ANDROID_SDK_VERSION}/1" $UNITY_ADAPTER_DEPS_FILE
+sed -i "" -e "s/_version = \"[.0-9]*\"/_version = \"${UNITY_ADAPTER_VERSION}\"/1" $UNITY_ADAPTER_CONFIG_FILE
+sed -i "" -e "s/_androidSdkVersion = \"[.0-9]*\"/_androidSdkVersion = \"${ANDROID_ADAPTER_VERSION}\"/1" $UNITY_ADAPTER_CONFIG_FILE
+sed -i "" -e "s/_iosSdkVersion = \"[.0-9]*\"/_iosSdkVersion = \"${IOS_ADAPTER_VERSION}\"/1" $UNITY_ADAPTER_CONFIG_FILE
 
 # Delete existing adapters
 echo "Removing existing adapters..."

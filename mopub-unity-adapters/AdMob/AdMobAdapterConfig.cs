@@ -2,7 +2,11 @@ using System.Collections.Generic;
 
 public class AdMobAdapterConfig : AdapterConfig
 {
-    private const string _version = "1.0";
+    // WARNING: These values are auto-updated by the packaging script.
+    private const string _version = "1.1";
+    private const string _androidSdkVersion = "17.0.0.2";
+    private const string _iosSdkVersion = "7.35.1.0";
+
 
     public override string Name
     {
@@ -19,8 +23,8 @@ public class AdMobAdapterConfig : AdapterConfig
     {
         get {
             return new Dictionary<Platform, string> {
-                { Platform.ANDROID, "17.0.0" },
-                { Platform.IOS, "7.35.1" }
+                { Platform.ANDROID, _androidSdkVersion },
+                { Platform.IOS, _iosSdkVersion }
             };
         }
     }
