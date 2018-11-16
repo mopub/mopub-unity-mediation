@@ -1,4 +1,1 @@
-public class TapjoyInstaller
-{
-    // TODO: implement installer
-}
+public class TapjoyInstaller { }

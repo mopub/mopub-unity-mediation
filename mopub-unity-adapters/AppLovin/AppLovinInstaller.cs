@@ -1,4 +1,1 @@
-public class AppLovinInstaller
-{
-    // TODO: implement installer
-}
+public class AppLovinInstaller { }

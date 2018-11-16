@@ -1,4 +1,1 @@
-public class FlurryInstaller
-{
-    // TODO: implement installer
-}
+public class FlurryInstaller { }

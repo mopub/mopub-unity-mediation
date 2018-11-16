@@ -1,4 +1,1 @@
-public class IronSourceInstaller
-{
-    // TODO: implement installer
-}
+public class IronSourceInstaller { }

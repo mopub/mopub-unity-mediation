@@ -1,8 +1,7 @@
 <dependencies>
  <androidPackages>
    <androidPackage spec="com.mopub.mediation:admob:17.0.0.2"/>
-   <androidPackage spec="com.google.android.gms:play-services-ads:17.0.0">
-   </androidPackage>
+   <androidPackage spec="com.google.android.gms:play-services-ads:17.0.0"/>
  </androidPackages>
  <iosPods>
    <iosPod name="MoPub-AdMob-Adapters" version="7.35.1.0" bitcodeEnabled="false" minTargetSdk="8.0"/>

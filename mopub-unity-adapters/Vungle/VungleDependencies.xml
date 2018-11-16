@@ -1,0 +1,10 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:vungle:6.3.24.0"/>
+   <androidPackage spec="com.github.vungle:vungle-android-sdk:6.3.24"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Vungle-Adapters" version="6.3.2" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="VungleSDK-iOS" version="6.3.2" bitcodeEnabled="false" minTargetSdk="8.0"/>
+ </iosPods>
+</dependencies>

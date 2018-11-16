@@ -1,4 +1,1 @@
-public class FacebookAudienceNetworkInstaller
-{
-    // TODO: implement installer
-}
+public class FacebookAudienceNetworkInstaller { }

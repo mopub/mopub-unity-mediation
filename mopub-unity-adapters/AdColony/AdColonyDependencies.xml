@@ -1,0 +1,10 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:adcolony:3.3.5.1"/>
+   <androidPackage spec="com.adcolony:sdk:3.3.5"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-AdColony-Adapters" version="3.3.5.0" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="AdColony" version="3.3.5" bitcodeEnabled="false" minTargetSdk="8.0"/>
+ </iosPods>
+</dependencies>

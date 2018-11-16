@@ -1,0 +1,12 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:flurry:10.1.0.2"/>
+   <androidPackage spec="com.flurry.android:ads:10.1.0@aar"/>
+   <androidPackage spec="com.flurry.android:analytics:10.1.0@aar"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Flurry-Adapters" version="9.2.1.0" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="Flurry-iOS-SDK/FlurrySDK" version="9.2.1" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="Flurry-iOS-SDK/FlurryAds" version="9.2.1" bitcodeEnabled="false" minTargetSdk="8.0"/>
+ </iosPods>
+</dependencies>

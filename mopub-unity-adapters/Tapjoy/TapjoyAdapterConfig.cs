@@ -1,17 +1,16 @@
 using System.Collections.Generic;
 
-public class AdMobAdapterConfig : AdapterConfig
+public class TapjoyAdapterConfig : AdapterConfig
 {
     // WARNING: These values are auto-updated by the packaging script.
     private const string _version = "1.0";
-    private const string _androidSdkVersion = "17.0.0.2";
-    private const string _iosSdkVersion = "7.35.1.0";
+    private const string _androidSdkVersion = "12.1.0.1";
+    private const string _iosSdkVersion = "12.1.0.0";
 
 
     public override string Name
     {
-        // TODO: change back to "AdMob" when SDK Manager uses new keyname field
-        get { return "Google(AdMob)"; }
+        get { return "Tapjoy"; }
     }
 
     public override string Version
@@ -33,8 +32,8 @@ public class AdMobAdapterConfig : AdapterConfig
     {
         get {
             return new Dictionary<Platform, string> {
-                { Platform.ANDROID, "com.mopub.mobileads.GooglePlayServices" },
-                { Platform.IOS, "MPGoogleAdMob" }
+                { Platform.ANDROID, "com.mopub.mobileads.Tapjoy" },
+                { Platform.IOS, "Tapjoy" }
             };
         }
     }

@@ -1,0 +1,10 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:tapjoy:12.1.0.1"/>
+   <androidPackage 12.1.0/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Tapjoy-Adapters" version="12.1.0.0" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="TapjoySDK" version="12.1.0.0" bitcodeEnabled="false" minTargetSdk="8.0"/>
+ </iosPods>
+</dependencies>

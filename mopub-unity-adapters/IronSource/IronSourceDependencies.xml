@@ -1,0 +1,10 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:ironsource:6.7.12.0"/>
+   <androidPackage 6.7.12/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-IronSource-Adapters" version="6.7.12.0" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="IronSourceSDK" version="6.7.12" bitcodeEnabled="false" minTargetSdk="8.0"/>
+ </iosPods>
+</dependencies>

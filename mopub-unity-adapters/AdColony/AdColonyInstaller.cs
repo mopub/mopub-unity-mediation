@@ -1,4 +1,1 @@
-public class AdColonyInstaller
-{
-    // TODO: implement installer
-}
+public class AdColonyInstaller { }

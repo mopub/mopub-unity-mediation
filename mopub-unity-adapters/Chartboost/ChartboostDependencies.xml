@@ -1,0 +1,9 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:chartboost:7.2.1.1"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Chartboost-Adapters" version="7.2.0.3" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="ChartboostSDK" version="7.2.0" bitcodeEnabled="false" minTargetSdk="8.0"/>
+ </iosPods>
+</dependencies>

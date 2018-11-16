@@ -1,0 +1,9 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:unityads:2.3.0.2"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-UnityAds-Adapters" version="2.3.0.1" bitcodeEnabled="false" minTargetSdk="8.0"/>
+   <iosPod name="UnityAds" version="2.3.0.1" bitcodeEnabled="false" minTargetSdk="8.0"/>
+ </iosPods>
+</dependencies>
