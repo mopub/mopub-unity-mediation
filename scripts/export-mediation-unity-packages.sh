@@ -45,7 +45,7 @@ do
     IOS_PODSPEC_FILE="${IOS_ADAPTER_DIR}/MoPub-${SUPPORT_LIB}-PodSpecs/${NETWORK_ADAPTERS_NAME}.podspec"
     IOS_ADAPTER_VERSION=`less $IOS_PODSPEC_FILE | grep s.version | sed "s/^.*'\([.0-9]*\)'.*/\1/"`
     ANDROID_ADAPTER_JAR="${ANDROID_MEDIATION_DIR}/libs/${NETWORK_ADAPTERS_NAME_LOWERCASE}-*.jar"
-    ANDROID_EXPORT_DIR="Assets/Plugins/Android/mopub-support/libs"
+    ANDROID_EXPORT_DIR="Assets/MoPub/Plugins/Android/MoPub.plugin/libs"
     ANDROID_ADAPTER_VERSION=`echo $ANDROID_ADAPTER_JAR|sed "s/^.*${NETWORK_ADAPTERS_NAME_LOWERCASE}-\([.0-9]*[^\.jar]\).*/\1/"`
 
     # Delete existing adapters
