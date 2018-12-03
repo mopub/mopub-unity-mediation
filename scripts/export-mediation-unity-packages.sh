@@ -45,21 +45,22 @@ do
     IOS_PODSPEC_FILE="${IOS_ADAPTER_DIR}/MoPub-${SUPPORT_LIB}-PodSpecs/${NETWORK_ADAPTERS_NAME}.podspec"
     IOS_ADAPTER_VERSION=`less $IOS_PODSPEC_FILE | grep s.version | sed "s/^.*'\([.0-9]*\)'.*/\1/"`
     ANDROID_ADAPTER_JAR="${ANDROID_MEDIATION_DIR}/libs/${NETWORK_ADAPTERS_NAME_LOWERCASE}-*.jar"
-    ANDROID_EXPORT_DIR="Assets/Plugins/Android/mopub-support/libs"
+    ANDROID_EXPORT_DIR="Assets/Plugins/Android/mopub-support"
+    ANDROID_EXPORT_LIBS="${ANDROID_EXPORT_DIR}/libs"
     ANDROID_ADAPTER_VERSION=`echo $ANDROID_ADAPTER_JAR|sed "s/^.*${NETWORK_ADAPTERS_NAME_LOWERCASE}-\([.0-9]*[^\.jar]\).*/\1/"`
 
     # Delete existing adapters
     echo "Removing existing adapters..."
-    rm -r "${PROJECT_PATH}/${IOS_EXPORT_DIR}" 2> /dev/null
-    rm "${PROJECT_PATH}/${ANDROID_EXPORT_DIR}/"* 2> /dev/null
+    rm -r ${PROJECT_PATH}/${IOS_EXPORT_DIR}
+    rm -r ${PROJECT_PATH}/${ANDROID_EXPORT_LIBS}
 
     # Copy over new adapters
     echo "Copying new adapters..."
     mkdir -p "${PROJECT_PATH}/${IOS_EXPORT_DIR}"
     cp -r "${IOS_ADAPTER_DIR}" "${PROJECT_PATH}/${IOS_EXPORT_DIR}"
     validate
-    mkdir -p "${PROJECT_PATH}/${ANDROID_EXPORT_DIR}"
-    cp $ANDROID_ADAPTER_JAR "${PROJECT_PATH}/${ANDROID_EXPORT_DIR}/${NETWORK_ADAPTERS_NAME_LOWERCASE}-${ANDROID_ADAPTER_VERSION}.jar"
+    mkdir -p "${PROJECT_PATH}/${ANDROID_EXPORT_LIBS}"
+    cp $ANDROID_ADAPTER_JAR "${PROJECT_PATH}/${ANDROID_EXPORT_LIBS}/${NETWORK_ADAPTERS_NAME_LOWERCASE}-${ANDROID_ADAPTER_VERSION}.jar"
     validate
 
     # Generate Unity package
@@ -70,6 +71,10 @@ do
     validate
     echo "Exported ${NETWORK_ADAPTERS_NAME} (iOS: ${IOS_EXPORT_DIR} | Android: ${ANDROID_EXPORT_DIR}) to ${DEST_PACKAGE}"
 done
+
+echo "Cleaning up sample app..."
+rm -r ${PROJECT_PATH}/Assets/Plugins/iOS{,.meta}
+rm -r ${PROJECT_PATH}/${ANDROID_EXPORT_LIBS}{,.meta}
 
 git add .
 GREEN='\033[0;32m'
