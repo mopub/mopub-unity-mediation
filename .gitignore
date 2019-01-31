@@ -2,3 +2,9 @@
 
 # OS X
 *.DS_Store
+
+android-mediation/
+ios-mediation/
+
+# The generated project to export packages with
+export-project/

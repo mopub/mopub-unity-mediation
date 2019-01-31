@@ -1,6 +1,6 @@
 [submodule "mopub-ios-mediation"]
 	path = mopub-ios-mediation
-	url = https://github.com/mopub/mopub-ios-mediation
+	url = https://github.com/mopub/mopub-ios-mediation.git
 [submodule "mopub-android-mediation"]
 	path = mopub-android-mediation
-	url = https://github.com/mopub/mopub-android-mediation
+	url = https://github.com/mopub/mopub-android-mediation.git

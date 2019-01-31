@@ -1,0 +1,9 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:ironsource:ANDROID_ADAPTER_VERSION"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-IronSource-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
+</dependencies>
