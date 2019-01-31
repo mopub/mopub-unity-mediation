@@ -1,0 +1,11 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:flurry:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.flurry.android:ads:ANDROID_SDK_VERSION@aar"/>
+   <androidPackage spec="com.flurry.android:analytics:ANDROID_SDK_VERSION@aar"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Flurry-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
+</dependencies>

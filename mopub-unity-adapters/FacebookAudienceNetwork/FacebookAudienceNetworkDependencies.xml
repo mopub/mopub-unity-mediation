@@ -1,0 +1,10 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:facebookaudiencenetwork:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.facebook.android:audience-network-sdk:ANDROID_SDK_VERSION"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-FacebookAudienceNetwork-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
+</dependencies>

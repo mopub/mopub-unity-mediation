@@ -1,0 +1,10 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:admob:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.google.android.gms:play-services-ads:ANDROID_SDK_VERSION"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-AdMob-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
+</dependencies>

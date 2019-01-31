@@ -1,0 +1,14 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:vungle:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.github.vungle:vungle-android-sdk:ANDROID_SDK_VERSION">
+     <repositories>
+       <repository>https://jitpack.io</repository>
+     </repositories>
+   </androidPackage>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Vungle-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
+</dependencies>

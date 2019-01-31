@@ -1,0 +1,10 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:applovin:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.applovin:applovin-sdk:ANDROID_SDK_VERSION"/>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Applovin-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
+</dependencies>

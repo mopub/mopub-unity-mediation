@@ -1,0 +1,14 @@
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:adcolony:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.adcolony:sdk:ANDROID_SDK_VERSION">
+        <repositories>
+            <repository>https://adcolony.bintray.com/AdColony</repository>
+        </repositories>
+    </androidPackage>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-AdColony-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
+</dependencies>
