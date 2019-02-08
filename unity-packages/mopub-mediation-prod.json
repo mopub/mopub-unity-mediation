@@ -39,7 +39,7 @@
       "Unity" : {
         "filename" : "MoPub-AdColony-Adapters-prod-1.0.2-Android.3.3.7.1-iOS.3.3.5.4.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/adcolony/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-AdColony-Adapters-prod-1.0.2-Android.3.3.7.1-iOS.3.3.5.4.unitypackage?alt=media",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-AdColony-Adapters-prod-1.0.2-Android.3.3.7.1-iOS.3.3.5.4.unitypackage?alt=media",
         "packageVersion" : "1.0.2"
       },
       "iOS" : {
@@ -137,7 +137,7 @@
       "Unity" : {
         "filename" : "MoPub-Chartboost-Adapters-prod-1.0.2-Android.7.3.1.1-iOS.7.3.0.4.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/chartboost/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-Chartboost-Adapters-prod-1.0.2-Android.7.3.1.1-iOS.7.3.0.4.unitypackage?alt=media",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-Chartboost-Adapters-prod-1.0.2-Android.7.3.1.1-iOS.7.3.0.4.unitypackage?alt=media",
         "packageVersion" : "1.0.2"
       },
       "iOS" : {
@@ -290,7 +290,7 @@
       "Unity" : {
         "filename" : "MoPub-OnebyAOL-Adapters-prod-1.0.2-Android.6.8.2.1-iOS.6.8.1.4.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/aol/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-OnebyAOL-Adapters-prod-1.0.2-Android.6.8.2.1-iOS.6.8.1.4.unitypackage?alt=media",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-OnebyAOL-Adapters-prod-1.0.2-Android.6.8.2.1-iOS.6.8.1.4.unitypackage?alt=media",
         "packageVersion" : "1.0.2"
       },
       "iOS" : {
@@ -534,7 +534,7 @@
       "Unity" : {
         "filename" : "MoPub-IronSource-Adapters-prod-1.0.2-Android.6.8.0.1.1-iOS.6.8.0.0.4.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/ironsource/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-IronSource-Adapters-prod-1.0.2-Android.6.8.0.1.1-iOS.6.8.0.0.4.unitypackage?alt=media",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-IronSource-Adapters-prod-1.0.2-Android.6.8.0.1.1-iOS.6.8.0.0.4.unitypackage?alt=media",
         "packageVersion" : "1.0.2"
       },
       "iOS" : {
