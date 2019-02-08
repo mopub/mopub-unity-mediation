@@ -1,0 +1,563 @@
+{
+  "mopubBaseConfig" : {
+    "Android" : "repositories { \n    jcenter() // includes the MoPub SDK and AVID library \n    maven { url 'https://s3.amazonaws.com/moat-sdk-builds' } \n    maven { url 'https://maven.google.com' } // necessary for Android API 26 \n} \n\ndependencies { \n    compile('com.mopub:mopub-sdk:4.20.0@aar') { \n        transitive = true \n    } \n}",
+    "Unity" : {
+      "download_url" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPubUnity.unitypackage?alt=media",
+      "filename" : "MoPubUnity.unitypackage",
+      "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+      "version" : "5.5.0"
+    },
+    "iOS" : "pod 'mopub-ios-sdk'"
+  },
+  "news" : [ {
+    "message" : "[AdMob mediating MoPub] Mobile Ads SDK v17.1.2 is causing memory leaks for some publishers. The AdMob team is actively investigating this issue. Please reach out to your AdMob account team for more information.",
+    "label" : "Known Issue",
+    "date" : "12/18/18",
+    "learnmore" : ""
+  } ],
+  "releaseInfo" : {
+    "AdColony" : {
+      "Android" : {
+        "adUnitIds" : {
+          "interstitial" : "3aa79f11389540db8e250a80e4d16a46",
+          "rewardedvideo" : "e258c916e659447d9d98256a3ab2979e"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:adcolony"
+          },
+          "sdk" : {
+            "jcenter" : "com.adcolony:sdk",
+            "maven" : "maven { url 'https://adcolony.bintray.com/AdColony' }"
+          }
+        },
+        "version" : {
+          "adapter" : "3.3.7.1",
+          "sdk" : "3.3.7"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-AdColony-Adapters-prod-1.0.2-Android.3.3.7.1-iOS.3.3.5.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/mediation/networks/adcolony/",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-AdColony-Adapters-prod-1.0.2-Android.3.3.7.1-iOS.3.3.5.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.2"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "interstitial" : "9132b7bec61646f9ad5a0b6ec42a72d2",
+          "rewardedvideo" : "00809e0886e14b0ea7832cd69eb5cd49"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-AdColony-Adapters"
+          },
+          "sdk" : {
+            "pod" : "AdColony"
+          }
+        },
+        "version" : {
+          "adapter" : "3.3.5.4",
+          "sdk" : "3.3.5"
+        }
+      },
+      "keyname" : "AdColony",
+      "support" : "To download and integrate the AdColony SDK, please check this tutorial: https://github.com/AdColony/AdColony-Android-SDK-3/wiki/Project-Setup (Android) and https://github.com/AdColony/AdColony-iOS-SDK-3/wiki (iOS). \n\n For inquiries and support, please email support@adcolony.com.",
+      "supportedAdFormats" : [ "Interstitial", "Rewarded Video" ]
+    },
+    "AppLovin" : {
+      "Android" : {
+        "adUnitIds" : {
+          "banner" : "3bb1e241a91040d79c4194dd476b9c60",
+          "interstitial" : "d960ac7f90d041c8a4d817726a76a2fa",
+          "rewardedvideo" : "b28c982f77dd4c68a9e36ab7a1a87c1a"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:applovin"
+          },
+          "sdk" : {
+            "jcenter" : "com.applovin:applovin-sdk",
+            "maven" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "9.2.1.0",
+          "sdk" : "9.2.1"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-AppLovin-Adapters-prod-1.1.0-Android.9.2.1.0-iOS.6.2.0.0.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-AppLovin-Adapters-prod-1.1.0-Android.9.2.1.0-iOS.6.2.0.0.unitypackage?alt=media",
+        "packageVersion" : "1.1.0"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "banner" : "9b8a3cd5bb384a9baa6e402de437288a",
+          "interstitial" : "401ab65306b14dd4bf5e07f64c1d332a",
+          "rewardedvideo" : "ddf25dcb9cb14986943f7c11e99ca1a2"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-Applovin-Adapters"
+          },
+          "sdk" : {
+            "pod" : "AppLovinSDK"
+          }
+        },
+        "version" : {
+          "adapter" : "6.2.0.0",
+          "sdk" : "6.2.0"
+        }
+      },
+      "keyname" : "AppLovin",
+      "support" : "",
+      "supportedAdFormats" : [ "Banner", "Interstitial", "Rewarded Video" ]
+    },
+    "Chartboost" : {
+      "Android" : {
+        "adUnitIds" : {
+          "interstitial" : "376366b49d324dedae3d5edb360c27b4",
+          "rewardedvideo" : "df605ab15b56400285c99e521ecc2cb1"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:chartboost"
+          },
+          "sdk" : {
+            "jcenter" : "",
+            "maven" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "7.3.1.1",
+          "sdk" : "7.3.1"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-Chartboost-Adapters-prod-1.0.2-Android.7.3.1.1-iOS.7.3.0.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/mediation/networks/chartboost/",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-Chartboost-Adapters-prod-1.0.2-Android.7.3.1.1-iOS.7.3.0.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.2"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "interstitial" : "bb5403245ad14dc3817f81f4018477ec",
+          "rewardedvideo" : "2942576082c24e0f80c6172703572870"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-Chartboost-Adapters"
+          },
+          "sdk" : {
+            "pod" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "7.3.0.4",
+          "sdk" : "7.3.0"
+        }
+      },
+      "keyname" : "Chartboost",
+      "support" : "To download and integrate the Chartboost SDK, please check this tutorial: https://answers.chartboost.com/en-us/articles/download).\n\n For inquiries and support, please utilize the support center: https://answers.chartboost.com/en-us/zingtree.",
+      "supportedAdFormats" : [ "Interstitial", "Rewarded Video" ]
+    },
+    "Facebook Audience Network" : {
+      "Android" : {
+        "adUnitIds" : {
+          "banner" : "ec2240db7a5b4f9781e310c4e2776b61",
+          "interstitial" : "646d46d9f6aa453e99bf5b54c087bdd6",
+          "rewardedvideo" : "a8d5f5fff87c49b2a60c5df86ab4f447",
+          "native" : "d766dac54f70456a8106644c2812924f"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:facebookaudiencenetwork"
+          },
+          "sdk" : {
+            "jcenter" : "com.facebook.android:audience-network-sdk"
+          }
+        },
+        "version" : {
+          "adapter" : "5.1.0.2",
+          "sdk" : "5.1.0"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-FacebookAudienceNetwork-Adapters-prod-1.0.2-Android.5.1.0.2-iOS.5.1.0.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-FacebookAudienceNetwork-Adapters-prod-1.0.2-Android.5.1.0.2-iOS.5.1.0.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.2"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "banner" : "251b852492bf4e31921c39e3985a2d9d",
+          "interstitial" : "30a0281ef7f247bead00e4b76fde0843",
+          "rewardedvideo" : "8a1ed0ecc20c4975b41cba3ee8f93d54",
+          "native" : "8e808ccd0b1b44b6bafb8109096f0e0b"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-FacebookAudienceNetwork-Adapters"
+          },
+          "sdk" : {
+            "pod" : "FBAudienceNetwork"
+          }
+        },
+        "version" : {
+          "adapter" : "5.1.0.4",
+          "sdk" : "5.1.0"
+        }
+      },
+      "keyname" : "FacebookAudienceNetwork",
+      "support" : "To download and integrate the Facebook Audience Network SDK, please check this tutorial: https://developers.facebook.com/docs/audience-network/android#including (Android) and https://developers.facebook.com/docs/audience-network/ios (iOS).\n\n For inquiries and support, please utilize the support center: https://www.facebook.com/help/audiencenetwork/.",
+      "supportedAdFormats" : [ "Banner", "Interstitial", "Rewarded Video", "Native" ]
+    },
+    "Google (AdMob)" : {
+      "Android" : {
+        "adUnitIds" : {
+          "banner" : "faa64d034b684268926e07fc04d8fdb3",
+          "interstitial" : "4a488029dafb423790423370dc5835c0",
+          "rewardedvideo" : "faef74616c604395bbf155138b9d0185",
+          "native" : "57fd53ccacbf4e49a91b4f2cde681923"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:admob"
+          },
+          "sdk" : {
+            "jcenter" : "com.google.android.gms:play-services-ads",
+            "maven" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "17.1.2.3",
+          "sdk" : "17.1.2"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-AdMob-Adapters-prod-1.0.1-Android.17.1.2.3-iOS.7.37.0.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-AdMob-Adapters-prod-1.0.1-Android.17.1.2.3-iOS.7.37.0.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.1"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "banner" : "a103bd5801934c6ab6636bb52f472a25",
+          "interstitial" : "25de640e51e446909909b0de1953b440",
+          "rewardedvideo" : "26b9179af02741379cfd6b22cddb76db",
+          "native" : "c6359fe69581423bb16fd2414899eb0d"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-AdMob-Adapters"
+          },
+          "sdk" : {
+            "pod" : "Google-Mobile-Ads-SDK"
+          }
+        },
+        "version" : {
+          "adapter" : "7.37.0.4",
+          "sdk" : "7.37.0"
+        }
+      },
+      "keyname" : "AdMob",
+      "support" : "To download and integrate the Mobile Ads SDK, please check this tutorial: https://developers.google.com/admob/android/quick-start#import_the_mobile_ads_sdk (Android) and https://developers.google.com/admob/ios/quick-start#import_the_mobile_ads_sdk (iOS).\n\n For inquiries and support, please utilize the developer support forum: https://groups.google.com/forum/#!forum/google-admob-ads-sdk/.",
+      "supportedAdFormats" : [ "Banner", "Interstitial", "Rewarded Video", "Native" ]
+    },
+    "One by AOL" : {
+      "Android" : {
+        "adUnitIds" : {
+          "banner" : "e0dda86ac66e450b8edf64c7a759049a",
+          "interstitial" : "664a8cf1a58b44d780f9ee18f45edfb2",
+          "rewardedvideo" : "e294697e6e094217befd99071ed3f898",
+          "native" : "a72a2aaee8864b37acb5d502997e0ec4"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:onebyaol"
+          },
+          "sdk" : {
+            "jcenter" : "",
+            "maven" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "6.8.2.1",
+          "sdk" : "6.8.2"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-OnebyAOL-Adapters-prod-1.0.2-Android.6.8.2.1-iOS.6.8.1.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/mediation/networks/aol/",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-OnebyAOL-Adapters-prod-1.0.2-Android.6.8.2.1-iOS.6.8.1.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.2"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "banner" : "",
+          "interstitial" : "",
+          "rewardedvideo" : "",
+          "native" : "5c8086261dbe4881a32270254c25192e"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "# The MoPub Mediation Integration Tool no longer distributes the CocoaPods configuration for One by AOL. \n\n# To mediate AOL, download the adapters from https://github.com/mopub/mopub-ios-mediation/tree/master/OnebyAOL and the SDK binary from http://docs.onemobilesdk.aol.com/ios-ad-sdk/"
+          },
+          "sdk" : {
+            "pod" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "6.8.1.4",
+          "sdk" : "6.8.1"
+        }
+      },
+      "keyname" : "OnebyAOL",
+      "support" : "To download and integrate the AOL SDK, please check this tutorial: http://docs.onemobilesdk.aol.com/android-ad-sdk/ (Android) and http://docs.onemobilesdk.aol.com/ios-ad-sdk/ (iOS).\n\n For inquiries and support, please utilize the support portal: https://tools.mmedia.com/user/supportDevPortal.",
+      "supportedAdFormats" : [ "Banner", "Interstitial", "Rewarded Video", "Native" ]
+    },
+    "Tapjoy" : {
+      "Android" : {
+        "adUnitIds" : {
+          "interstitial" : "aee78cf481994c67b7e7cb983340a5f3",
+          "rewardedvideo" : "f2be86b5ae52440a83ef24d426074d2e"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:tapjoy"
+          },
+          "sdk" : {
+            "jcenter" : "com.tapjoy:tapjoy-android-sdk",
+            "maven" : "maven { url 'https://tapjoy.bintray.com/maven' }"
+          }
+        },
+        "version" : {
+          "adapter" : "12.2.0.1",
+          "sdk" : "12.2.0"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-Tapjoy-Adapters-prod-1.0.1-Android.12.2.0.1-iOS.12.2.0.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-Tapjoy-Adapters-prod-1.0.1-Android.12.2.0.1-iOS.12.2.0.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.1"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "interstitial" : "3504ab607b0342aabb182acecad391b0",
+          "rewardedvideo" : "e7bed4d89bb34a6baf1736e20acc9bf6"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-TapJoy-Adapters"
+          },
+          "sdk" : {
+            "pod" : "TapjoySDK"
+          }
+        },
+        "version" : {
+          "adapter" : "12.2.0.4",
+          "sdk" : "12.2.0"
+        }
+      },
+      "keyname" : "Tapjoy",
+      "support" : "To download and integrate the Tapjoy SDK, please check this tutorial: https://dev.tapjoy.com/sdk-integration/android/getting-started-guide-publishers-android/ (Android) and https://dev.tapjoy.com/sdk-integration/ios/getting-started-guide-publishers-ios/ (iOS).\n\n For inquiries and support, please utilize the support page: https://dev.tapjoy.com/contact-support/.",
+      "supportedAdFormats" : [ "Interstitial", "Rewarded Video" ]
+    },
+    "Unity Ads" : {
+      "Android" : {
+        "adUnitIds" : {
+          "banner" : "e1f1cc8425324386aa7f133db6ee602b",
+          "interstitial" : "6e442143d674437e9a417ae36aa93241",
+          "rewardedvideo" : "fa84b7823f4147d883f6bb967f8ef15f"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:unityads"
+          },
+          "sdk" : {
+            "jcenter" : "com.unity3d.ads:unity-ads",
+            "maven" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "3.0.0.1",
+          "sdk" : "3.0.0"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-UnityAds-Adapters-prod-1.0.1-Android.3.0.0.1-iOS.3.0.0.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-UnityAds-Adapters-prod-1.0.1-Android.3.0.0.1-iOS.3.0.0.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.1"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "banner" : "4c83b7cfdcae443090d31aba1fd4c373",
+          "interstitial" : "b6fbf864c148458cbf72a8a9eff23a0d",
+          "rewardedvideo" : "a58e34f7d14d47358630cb50425a12d1"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-UnityAds-Adapters"
+          },
+          "sdk" : {
+            "pod" : "UnityAds"
+          }
+        },
+        "version" : {
+          "adapter" : "3.0.0.4",
+          "sdk" : "3.0.0"
+        }
+      },
+      "keyname" : "UnityAds",
+      "support" : "To download and integrate the Unity Ads SDK, please check this tutorial: https://github.com/Unity-Technologies/unity-ads-android/releases (Android) and https://github.com/Unity-Technologies/unity-ads-ios/releases (iOS).\n\n For inquiries and support, please email unityads-support@unity3d.com.",
+      "supportedAdFormats" : [ "Banner", "Interstitial", "Rewarded Video" ]
+    },
+    "Vungle" : {
+      "Android" : {
+        "adUnitIds" : {
+          "interstitial" : "06afd52c99834e2f95b31084aff8e958",
+          "rewardedvideo" : "3ab5b17178f84b5caba811528fc9c5c2"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:vungle"
+          },
+          "sdk" : {
+            "jcenter" : "com.github.vungle:vungle-android-sdk",
+            "maven" : "maven { url 'https://jitpack.io' }"
+          }
+        },
+        "version" : {
+          "adapter" : "6.3.24.1",
+          "sdk" : "6.3.24"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-Vungle-Adapters-prod-1.0.1-Android.6.3.24.1-iOS.6.3.2.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-Vungle-Adapters-prod-1.0.1-Android.6.3.24.1-iOS.6.3.2.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.1"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "interstitial" : "538c114ee5b246f5a827a2e5cc4d7f0d",
+          "rewardedvideo" : "11ffd5d75f784e00a78e435e1f6cf118"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-Vungle-Adapters"
+          },
+          "sdk" : {
+            "pod" : "VungleSDK-iOS"
+          }
+        },
+        "version" : {
+          "adapter" : "6.3.2.4",
+          "sdk" : "6.3.2"
+        }
+      },
+      "keyname" : "Vungle",
+      "support" : "To download and integrate the Vungle SDK, please check this tutorial: https://dashboard.vungle.com/sdk.\n\n For inquiries and support, please utilize the support page: https://support.vungle.com/hc/en-us/requests/new.",
+      "supportedAdFormats" : [ "Interstitial", "Rewarded Video" ]
+    },
+    "Yahoo! Flurry" : {
+      "Android" : {
+        "adUnitIds" : {
+          "interstitial" : "a56eac0bacb8477f9c959b5364f8e569",
+          "native" : "f067181d6f554495bdb4824e4001e750"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:flurry"
+          },
+          "sdk" : {
+            "jcenter" : "com.flurry.android:ads",
+            "maven" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "11.4.0.1",
+          "sdk" : "11.4.0"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-Flurry-Adapters-prod-1.0.1-Android.11.4.0.1-iOS.9.2.1.5.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-Flurry-Adapters-prod-1.0.1-Android.11.4.0.1-iOS.9.2.1.5.unitypackage?alt=media",
+        "packageVersion" : "1.0.1"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "interstitial" : "18062846e9964d9e907e4af2ad6dfd5d",
+          "native" : "fe1eef8b4d584a3d8761af9857232f32"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-Flurry-Adapters"
+          },
+          "sdk" : {
+            "pod" : "Flurry-iOS-SDK/FlurryAds"
+          }
+        },
+        "version" : {
+          "adapter" : "9.2.1.5",
+          "sdk" : "9.2.1"
+        }
+      },
+      "keyname" : "Flurry",
+      "support" : "To download and integrate the Flurry SDK, please check this tutorial: https://developer.yahoo.com/flurry/docs/integrateflurry/android/#install-flurry-android-sdk (Android) and https://developer.yahoo.com/flurry/docs/integrateflurry/ios/#install-flurry-android-sdk (iOS).\n\n For inquiries and support, please utilize the support center: https://developer.yahoo.com/flurry/docs/faq/faqpublisher/android/.",
+      "supportedAdFormats" : [ "Interstitial", "Native" ]
+    },
+    "ironSource" : {
+      "Android" : {
+        "adUnitIds" : {
+          "interstitial" : "9556b7f57e724cb4b5eba926b8258e3c",
+          "rewardedvideo" : "885b4f0c25884d468da2c8d657b0d95b"
+        },
+        "config" : {
+          "adapter" : {
+            "jcenter" : "com.mopub.mediation:ironsource"
+          },
+          "sdk" : {
+            "jcenter" : "com.ironsource.sdk:mediationsdk",
+            "maven" : "maven { url 'https://dl.bintray.com/ironsource-mobile/android-sdk'}"
+          }
+        },
+        "version" : {
+          "adapter" : "6.8.0.1.1",
+          "sdk" : "6.8.0.1"
+        }
+      },
+      "Unity" : {
+        "filename" : "MoPub-IronSource-Adapters-prod-1.0.2-Android.6.8.0.1.1-iOS.6.8.0.0.4.unitypackage",
+        "installGuide" : "https://developers.mopub.com/docs/mediation/networks/ironsource/",
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-IronSource-Adapters-prod-1.0.2-Android.6.8.0.1.1-iOS.6.8.0.0.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.2"
+      },
+      "iOS" : {
+        "adUnitIds" : {
+          "interstitial" : "428b6a1dfb9a45348596624d61111932",
+          "rewardedvideo" : "2e4871ae7d50404e8b563f4e139d87a5"
+        },
+        "config" : {
+          "adapter" : {
+            "pod" : "MoPub-IronSource-Adapters"
+          },
+          "sdk" : {
+            "pod" : ""
+          }
+        },
+        "version" : {
+          "adapter" : "6.8.0.0.4",
+          "sdk" : "6.8.0.0"
+        }
+      },
+      "keyname" : "IronSource",
+      "support" : "",
+      "supportedAdFormats" : [ "Interstitial", "Rewarded Video" ]
+    }
+  }
+}
