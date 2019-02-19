@@ -236,10 +236,10 @@
         }
       },
       "Unity" : {
-        "filename" : "MoPub-AdMob-Adapters-prod-1.0.1-Android.17.1.2.3-iOS.7.37.0.4.unitypackage",
+        "filename" : "MoPub-AdMob-Adapters-prod-1.0.2-Android.17.1.2.3-iOS.7.39.0.0.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-AdMob-Adapters-prod-1.0.1-Android.17.1.2.3-iOS.7.37.0.4.unitypackage?alt=media",
-        "packageVersion" : "1.0.1"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-AdMob-Adapters-prod-1.0.2-Android.17.1.2.3-iOS.7.39.0.0.unitypackage?alt=media",
+        "packageVersion" : "1.0.2"
       },
       "iOS" : {
         "adUnitIds" : {
@@ -257,8 +257,8 @@
           }
         },
         "version" : {
-          "adapter" : "7.37.0.4",
-          "sdk" : "7.37.0"
+          "adapter" : "7.39.0.0",
+          "sdk" : "7.39.0"
         }
       },
       "keyname" : "AdMob",
