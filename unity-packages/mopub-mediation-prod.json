@@ -382,15 +382,15 @@
           }
         },
         "version" : {
-          "adapter" : "3.0.1.0",
-          "sdk" : "3.0.1"
+          "adapter" : "3.0.0.1",
+          "sdk" : "3.0.0"
         }
       },
       "Unity" : {
         "filename" : "MoPub-UnityAds-Adapters.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-UnityAds-Adapters-prod-1.0.2-Android.3.0.1.0-iOS.3.0.1.0.unitypackage?alt=media",
-        "packageVersion" : "1.0.2"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-UnityAds-Adapters-prod-1.0.1-Android.3.0.0.1-iOS.3.0.0.4.unitypackage?alt=media",
+        "packageVersion" : "1.0.1"
       },
       "iOS" : {
         "adUnitIds" : {
@@ -407,8 +407,8 @@
           }
         },
         "version" : {
-          "adapter" : "3.0.1.0",
-          "sdk" : "3.0.1"
+          "adapter" : "3.0.0.4",
+          "sdk" : "3.0.0"
         }
       },
       "keyname" : "UnityAds",
