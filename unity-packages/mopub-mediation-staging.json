@@ -479,15 +479,15 @@
           }
         },
         "version" : {
-          "adapter" : "11.4.0.1",
-          "sdk" : "11.4.0"
+          "adapter" : "11.5.0.0",
+          "sdk" : "11.5.0"
         }
       },
       "Unity" : {
         "filename" : "MoPub-Flurry-Adapters.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-Flurry-Adapters-prod-1.0.1-Android.11.4.0.1-iOS.9.2.1.5.unitypackage?alt=media",
-        "packageVersion" : "1.0.1"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-Flurry-Adapters-prod-1.1.0-Android.11.5.0.0-iOS.9.3.1.0.unitypackage?alt=media",
+        "packageVersion" : "1.1.0"
       },
       "iOS" : {
         "adUnitIds" : {
@@ -503,8 +503,8 @@
           }
         },
         "version" : {
-          "adapter" : "9.2.1.5",
-          "sdk" : "9.2.1"
+          "adapter" : "9.3.1.0",
+          "sdk" : "9.3.1"
         }
       },
       "keyname" : "Flurry",
