@@ -534,8 +534,8 @@
       "Unity" : {
         "filename" : "MoPub-IronSource-Adapters.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/ironsource/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-IronSource-Adapters-prod-1.0.4-Android.6.8.1.0-iOS.6.8.1.0.0.unitypackage?alt=media",
-        "packageVersion" : "1.0.4"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-IronSource-Adapters-prod-1.0.5-Android.6.8.1.0-iOS.6.8.1.0.1.unitypackage?alt=media",
+        "packageVersion" : "1.0.5"
       },
       "iOS" : {
         "adUnitIds" : {
@@ -551,7 +551,7 @@
           }
         },
         "version" : {
-          "adapter" : "6.8.1.0.0",
+          "adapter" : "6.8.1.0.1",
           "sdk" : "6.8.1.0"
         }
       },
