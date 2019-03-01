@@ -8,3 +8,4 @@ ios-mediation/
 
 # The generated project to export packages with
 export-project/
+/scripts/
