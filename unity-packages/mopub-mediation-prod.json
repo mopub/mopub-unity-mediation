@@ -32,15 +32,15 @@
           }
         },
         "version" : {
-          "adapter" : "3.3.7.1",
-          "sdk" : "3.3.7"
+          "adapter" : "3.3.8.0",
+          "sdk" : "3.3.8"
         }
       },
       "Unity" : {
         "filename" : "MoPub-AdColony-Adapters.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/adcolony/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-AdColony-Adapters-prod-1.0.2-Android.3.3.7.1-iOS.3.3.5.4.unitypackage?alt=media",
-        "packageVersion" : "1.0.2"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation.appspot.com/o/MoPub-AdColony-Adapters-prod-1.0.3-Android.3.3.8.0-iOS.3.3.7.0.unitypackage?alt=media",
+        "packageVersion" : "1.0.3"
       },
       "iOS" : {
         "adUnitIds" : {
@@ -56,8 +56,8 @@
           }
         },
         "version" : {
-          "adapter" : "3.3.5.4",
-          "sdk" : "3.3.5"
+          "adapter" : "3.3.7.0",
+          "sdk" : "3.3.7"
         }
       },
       "keyname" : "AdColony",
