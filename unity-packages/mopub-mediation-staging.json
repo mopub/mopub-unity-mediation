@@ -39,8 +39,8 @@
       "Unity" : {
         "filename" : "MoPub-AdColony-Adapters.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/adcolony/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-AdColony-Adapters-prod-1.0.3-Android.3.3.8.0-iOS.3.3.7.0.unitypackage?alt=media",
-        "packageVersion" : "1.0.3"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-AdColony-Adapters-prod-1.0.4-Android.3.3.8.0-iOS.3.3.7.0.unitypackage?alt=media",
+        "packageVersion" : "1.0.4"
       },
       "iOS" : {
         "adUnitIds" : {
@@ -179,15 +179,15 @@
           }
         },
         "version" : {
-          "adapter" : "5.1.0.2",
-          "sdk" : "5.1.0"
+          "adapter" : "5.2.0.0",
+          "sdk" : "5.2.0"
         }
       },
       "Unity" : {
         "filename" : "MoPub-FacebookAudienceNetwork-Adapters.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/unity/getting-started/#integrate-the-plugin-and-adapters",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-FacebookAudienceNetwork-Adapters-prod-1.0.2-Android.5.1.0.2-iOS.5.1.0.4.unitypackage?alt=media",
-        "packageVersion" : "1.0.2"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-FacebookAudienceNetwork-Adapters-prod-1.0.3-Android.5.2.0.0-iOS.5.2.0.0.unitypackage?alt=media",
+        "packageVersion" : "1.0.3"
       },
       "iOS" : {
         "adUnitIds" : {
@@ -205,8 +205,8 @@
           }
         },
         "version" : {
-          "adapter" : "5.1.0.4",
-          "sdk" : "5.1.0"
+          "adapter" : "5.2.0.0",
+          "sdk" : "5.2.0"
         }
       },
       "keyname" : "FacebookAudienceNetwork",
