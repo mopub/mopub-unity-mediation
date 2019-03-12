@@ -527,15 +527,15 @@
           }
         },
         "version" : {
-          "adapter" : "6.8.1.0",
-          "sdk" : "6.8.1"
+          "adapter" : "6.8.2.0",
+          "sdk" : "6.8.2"
         }
       },
       "Unity" : {
         "filename" : "MoPub-IronSource-Adapters.unitypackage",
         "installGuide" : "https://developers.mopub.com/docs/mediation/networks/ironsource/",
-        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-IronSource-Adapters-prod-1.0.5-Android.6.8.1.0-iOS.6.8.1.0.1.unitypackage?alt=media",
-        "packageVersion" : "1.0.5"
+        "packageUrl" : "https://firebasestorage.googleapis.com/v0/b/mopub-mediation-staging.appspot.com/o/MoPub-IronSource-Adapters-prod-1.1.0-Android.6.8.2.0-iOS.6.8.1.0.1.unitypackage?alt=media",
+        "packageVersion" : "1.1.0"
       },
       "iOS" : {
         "adUnitIds" : {
