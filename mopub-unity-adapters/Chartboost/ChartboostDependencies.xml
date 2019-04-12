@@ -1,6 +1,8 @@
 <dependencies>
  <androidPackages>
    <androidPackage spec="com.mopub.mediation:chartboost:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.google.android.gms:play-services-base:+"/>
+   <androidPackage spec="com.google.android.gms:play-services-ads-identifier:+"/>
  </androidPackages>
  <iosPods>
    <iosPod name="MoPub-Chartboost-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
