@@ -1,14 +1,14 @@
 <dependencies>
-    <androidPackages>
-        <androidPackage spec="com.mopub.mediation:ironsource:ANDROID_ADAPTER_VERSION" />
-        <androidPackage spec="com.ironsource.sdk:mediationsdk:ANDROID_SDK_VERSION@jar">
-            <repositories>
-                <repository>https://dl.bintray.com/ironsource-mobile/android-sdk</repository>
-            </repositories>
-        </androidPackage>
-    </androidPackages>
-    <iosPods>
-        <iosPod name="MoPub-IronSource-Adapters" IOS_ADAPTER_SPEC bitcodeEnabled="false"
-            minTargetSdk="9.0" subspecs="['Network']" />
-    </iosPods>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:ironsource:ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.ironsource.sdk:mediationsdk:ANDROID_SDK_VERSION@jar">
+        <repositories>
+            <repository>https://dl.bintray.com/ironsource-mobile/android-sdk</repository>
+        </repositories>
+    </androidPackage>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-IronSource-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
+           IOS_ADAPTER_SPEC/>
+ </iosPods>
 </dependencies>
