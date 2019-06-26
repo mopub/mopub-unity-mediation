@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public class VunglePackageConfig : PackageConfig
+public class VerizonPackageConfig : PackageConfig
 {
     public override string Name
     {
