@@ -1,9 +1,0 @@
-<dependencies>
- <androidPackages>
-   <androidPackage spec="com.mopub.mediation:onebyaol:ANDROID_ADAPTER_VERSION"/>
- </androidPackages>
- <iosPods>
-   <iosPod name="MoPub-OnebyAOL-Adapters" subspecs="['Network']" bitcodeEnabled="false" minTargetSdk="9.0"
-           IOS_ADAPTER_SPEC/>
- </iosPods>
-</dependencies>
