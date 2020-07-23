@@ -1,0 +1,11 @@
+<!-- WARNING: File modified by script.  Keep all tags with a mopub-key attribute to a single line. -->
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:pangle:3.1.0.1.0" mopub-key="ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.bytedance.sdk:pangle-sdk:3.1.0.1" mopub-key="ANDROID_SDK_VERSION">
+    </androidPackage>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Pangle-Adapters" subspecs="['Network']" minTargetSdk="8.0" version="3.1.0.4.0" mopub-key="IOS_ADAPTER_VERSION"/>
+ </iosPods>
+</dependencies>
